@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail, Sun, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from 'framer-motion'
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -16,6 +17,26 @@ const navLinks = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+
+  //Framer Motion 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5, 
+      }
+    }
+  }
+
+  const item = {
+    hidden: { opacity: 0, y: -20 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4 },
+    },
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full">
@@ -59,21 +80,27 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-1">
+            <motion.div
+              className="hidden lg:flex items-center gap-1"
+              variants={container}
+              initial="hidden"
+              animate="show"
+            >
               {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                    location.pathname === link.path
-                      ? "bg-primary text-primary-foreground"
-                      : "text-foreground hover:bg-secondary hover:text-primary"
-                  }`}
-                >
-                  {link.name}
-                </Link>
+                <motion.div variants={item} key={link.path}>
+                  <Link
+                    // key={link.path}
+                    to={link.path}
+                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${location.pathname === link.path
+                        ? "bg-primary text-primary-foreground"
+                        : "text-foreground hover:bg-secondary hover:text-primary"
+                      }`}
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
 
             {/* CTA Button */}
             <div className="hidden lg:block">
@@ -100,11 +127,10 @@ const Navbar = () => {
                     key={link.path}
                     to={link.path}
                     onClick={() => setIsOpen(false)}
-                    className={`px-4 py-3 rounded-lg font-medium transition-all ${
-                      location.pathname === link.path
+                    className={`px-4 py-3 rounded-lg font-medium transition-all ${location.pathname === link.path
                         ? "bg-primary text-primary-foreground"
                         : "text-foreground hover:bg-secondary"
-                    }`}
+                      }`}
                   >
                     {link.name}
                   </Link>
