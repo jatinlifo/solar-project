@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 const products = [
   {
     title: "Solar Systems",
-    image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=600&q=80",
+    image: "https://static.vecteezy.com/system/resources/previews/001/235/998/non_2x/solar-panel-cell-on-dramatic-sunset-sky-background-free-photo.jpg",
     features: ["Solar Panels", "Inverters", "Batteries", "Complete Installations"],
   },
   {
@@ -15,7 +15,7 @@ const products = [
   },
   {
     title: "Electrical Equipment",
-    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=600&q=80",
+    image: "https://lh6.googleusercontent.com/proxy/2viYAeK1dj5_KpDUCGORONTVIT-HQ_1ERYQPnyZ5LAvIoqAJslOWojHJ8QXmVOJaTe3pK9SyG1FuycU3OoZqgX7xG_M_Iul7O9Njb4KeXpwYrCvIPcFYhh59I_ogZQ",
     features: ["Switches & Sockets", "Wires & Cables", "MCBs & DBs", "Accessories"],
   },
   {

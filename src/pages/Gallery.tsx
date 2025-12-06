@@ -76,7 +76,7 @@ const Gallery = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-hero text-primary-foreground section-padding">
+      <section className="bg-[#0A284E] text-primary-foreground section-padding">
         <div className="container-wide">
           <div className="max-w-3xl">
             <span className="inline-block px-4 py-1 bg-primary-foreground/10 rounded-full text-sm font-semibold mb-4 border border-primary-foreground/20">
@@ -103,7 +103,7 @@ const Gallery = () => {
                 onClick={() => setActiveCategory(category)}
                 className={`px-6 py-2 rounded-full font-medium transition-all ${
                   activeCategory === category
-                    ? "bg-primary text-primary-foreground"
+                    ? "bg-[#0A284E] text-primary-foreground"
                     : "bg-secondary text-foreground hover:bg-primary/10"
                 }`}
               >

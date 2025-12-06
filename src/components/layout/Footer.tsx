@@ -10,28 +10,29 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
-                <Zap className="w-7 h-7 text-accent" />
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-glow">
+                {/* <Zap className="w-7 h-7 text-accent" /> */}
+                <img className="" src="logo3.png" alt="" />
               </div>
               <div>
-                <h3 className="font-display font-bold text-xl">SHREEJI</h3>
-                <p className="text-xs text-primary-foreground/70 font-medium tracking-wide">ENTERPRISES</p>
+                <h3 className="font-display font-bold text-xl">SHREEJI ENTERPRISES</h3>
+                {/* <p className="text-xs text-primary-foreground/70 font-medium tracking-wide">ENTERPRISES</p> */}
               </div>
             </Link>
             <p className="text-primary-foreground/80 leading-relaxed">
               The Foundation of Growth and Excellence. Your trusted partner for solar systems, electrical solutions, LED lighting, and EV charging infrastructure.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="#" className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-[#0A284E] transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="#" className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-[#0A284E] transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="#" className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-[#0A284E] transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="#" className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-[#0A284E] transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>

@@ -104,7 +104,7 @@ const Services = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-hero text-primary-foreground section-padding">
+      <section className="bg-[#0A284E] text-primary-foreground section-padding">
         <div className="container-wide">
           <div className="max-w-3xl">
             <span className="inline-block px-4 py-1 bg-primary-foreground/10 rounded-full text-sm font-semibold mb-4 border border-primary-foreground/20">
@@ -138,7 +138,7 @@ const Services = () => {
                 </div>
                 <div className={`p-8 lg:p-12 flex flex-col justify-center ${index % 2 === 1 ? "lg:order-1" : ""}`}>
                   <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                    <service.icon className="w-7 h-7 text-primary" />
+                    <service.icon className="w-7 h-7 text-[#0A284E]" />
                   </div>
                   <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
                     {service.title}

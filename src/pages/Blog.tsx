@@ -70,7 +70,7 @@ const Blog = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-hero text-primary-foreground section-padding">
+      <section className="bg-[#0A284E] text-primary-foreground section-padding">
         <div className="container-wide">
           <div className="max-w-3xl">
             <span className="inline-block px-4 py-1 bg-primary-foreground/10 rounded-full text-sm font-semibold mb-4 border border-primary-foreground/20">
@@ -148,7 +148,7 @@ const Blog = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold mb-3">
+                  <span className="inline-block px-3 py-1 bg-primary/10 text-[#0A284E] rounded-full text-xs font-semibold mb-3">
                     {post.category}
                   </span>
                   <h3 className="font-display text-xl font-bold text-foreground mb-3 line-clamp-2">
@@ -175,7 +175,7 @@ const Blog = () => {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="section-padding bg-gradient-hero text-primary-foreground">
+      <section className="section-padding bg-[#0A284E] text-primary-foreground">
         <div className="container-wide text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
             Stay Updated with Our Newsletter

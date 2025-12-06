@@ -7,7 +7,7 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-hero text-primary-foreground section-padding">
+      <section className="bg-[#0A284E] text-primary-foreground section-padding">
         <div className="container-wide">
           <div className="max-w-3xl">
             <span className="inline-block px-4 py-1 bg-primary-foreground/10 rounded-full text-sm font-semibold mb-4 border border-primary-foreground/20">
@@ -99,7 +99,7 @@ const About = () => {
       </section>
 
       {/* Stats */}
-      <section className="section-padding bg-gradient-hero text-primary-foreground">
+      <section className="section-padding bg-[#0A284E] text-primary-foreground">
         <div className="container-wide">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[

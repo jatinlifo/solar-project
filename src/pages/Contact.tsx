@@ -30,7 +30,7 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-hero text-primary-foreground section-padding">
+      <section className="bg-[#0A284E] text-primary-foreground section-padding">
         <div className="container-wide">
           <div className="max-w-3xl">
             <span className="inline-block px-4 py-1 bg-primary-foreground/10 rounded-full text-sm font-semibold mb-4 border border-primary-foreground/20">
@@ -239,7 +239,7 @@ const Contact = () => {
       <section className="h-96 bg-secondary">
         <div className="w-full h-full flex items-center justify-center">
           <div className="text-center">
-            <MapPin className="w-16 h-16 text-primary mx-auto mb-4" />
+            <MapPin className="w-16 h-16 text-[#0A284E] mx-auto mb-4" />
             <p className="text-muted-foreground">Map integration coming soon</p>
             <p className="text-sm text-muted-foreground mt-2">Povisaaz Address Here</p>
           </div>

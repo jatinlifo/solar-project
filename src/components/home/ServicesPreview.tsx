@@ -55,7 +55,7 @@ const ServicesPreview = () => {
       <div className="container-wide">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+          <span className="inline-block px-4 py-1 bg-primary/10 text-[#0A284E] rounded-full text-lg font-semibold mb-4">
             Our Services
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
@@ -85,7 +85,7 @@ const ServicesPreview = () => {
               </p>
               <Link 
                 to="/services" 
-                className="inline-flex items-center text-primary font-semibold hover:gap-3 gap-2 transition-all"
+                className="inline-flex items-center text-[#0A284E] font-semibold hover:gap-3 gap-2 transition-all"
               >
                 Learn More <ArrowRight className="w-4 h-4" />
               </Link>

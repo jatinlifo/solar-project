@@ -4,7 +4,7 @@ import { ArrowRight, Sun, Zap, Shield } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-gradient-hero overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center bg-[#0A284E] overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-accent rounded-full blur-3xl" />

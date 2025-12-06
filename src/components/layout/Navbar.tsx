@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail, Sun, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -19,6 +19,17 @@ const Navbar = () => {
   const location = useLocation();
   //first render check
   const firstRender =  useRef(true);
+
+  useEffect(() => {
+    const hasAnimated = localStorage.getItem("navbarAnimated");
+
+    if (hasAnimated) {
+      firstRender.current = false;
+    } else {
+      firstRender.current = true;
+      localStorage.setItem("navbarAnimated", "true");
+    }
+  }, []);
 
   //Framer Motion 
   const container = {
@@ -43,7 +54,7 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full">
       {/* Top Bar */}
-      <div className="bg-primary text-primary-foreground py-2 hidden md:block">
+      <div className="bg-[#0A284E] text-primary-foreground py-2 hidden md:block">
         <div className="container-wide flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
             <a href="tel:1237655799" className="flex items-center gap-2 hover:text-accent transition-colors">
@@ -68,16 +79,17 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-hero rounded-xl flex items-center justify-center shadow-glow">
-                <Zap className="w-7 h-7 text-accent" />
+              <div className="w-12 h-12 flex items-center justify-center shadow-glow">
+                {/* <Zap className="w-7 h-7 text-accent" /> */}
+                <img className="" src="logo3.png" alt="" />
               </div>
               <div>
                 <h1 className="font-display font-bold text-xl text-foreground leading-tight">
-                  SHREEJI
+                  SHREEJI ENTERPRISES
                 </h1>
-                <p className="text-xs text-muted-foreground font-medium tracking-wide">
-                  ENTERPRISES
-                </p>
+                {/* <p className="text-xs text-muted-foreground font-medium tracking-wide">
+                  
+                </p> */}
               </div>
             </Link>
 
@@ -95,8 +107,8 @@ const Navbar = () => {
                     // key={link.path}
                     to={link.path}
                     className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${location.pathname === link.path
-                        ? "bg-primary text-primary-foreground"
-                        : "text-foreground hover:bg-secondary hover:text-primary"
+                        ? "bg-[#0A284E] text-primary-foreground"
+                        : "text-foreground hover:bg-secondary hover:text-[#0A284E]"
                       }`}
                   >
                     {link.name}
@@ -131,8 +143,8 @@ const Navbar = () => {
                     to={link.path}
                     onClick={() => setIsOpen(false)}
                     className={`px-4 py-3 rounded-lg font-medium transition-all ${location.pathname === link.path
-                        ? "bg-primary text-primary-foreground"
-                        : "text-foreground hover:bg-secondary"
+                        ? "bg-[#0A284E] text-primary-foreground"
+                        : "text-[#0A284E] hover:bg-secondary"
                       }`}
                   >
                     {link.name}
