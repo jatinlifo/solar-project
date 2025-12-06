@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail, Sun, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -17,6 +17,8 @@ const navLinks = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  //first render check
+  const firstRender =  useRef(true);
 
   //Framer Motion 
   const container = {
@@ -83,8 +85,9 @@ const Navbar = () => {
             <motion.div
               className="hidden lg:flex items-center gap-1"
               variants={container}
-              initial="hidden"
-              animate="show"
+              initial={firstRender.current ? "hidden" : false}
+              animate={firstRender.current ? "show" : false}
+              onAnimationComplete={()=> {firstRender.current = false}}
             >
               {navLinks.map((link) => (
                 <motion.div variants={item} key={link.path}>
