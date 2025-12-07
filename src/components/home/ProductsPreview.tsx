@@ -4,21 +4,25 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 
 const products = [
   {
+    route: 'solar-system',
     title: "Solar Systems",
     image: "https://static.vecteezy.com/system/resources/previews/001/235/998/non_2x/solar-panel-cell-on-dramatic-sunset-sky-background-free-photo.jpg",
     features: ["Solar Panels", "Inverters", "Batteries", "Complete Installations"],
   },
   {
+    route: 'led-lighting', 
     title: "LED Lighting",
     image: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=600&q=80",
     features: ["LED Panels", "Bulbs & Tubes", "Concealed Lighting", "Decorative Lights"],
   },
   {
+    route: 'electrical-equipment',
     title: "Electrical Equipment",
     image: "https://lh6.googleusercontent.com/proxy/2viYAeK1dj5_KpDUCGORONTVIT-HQ_1ERYQPnyZ5LAvIoqAJslOWojHJ8QXmVOJaTe3pK9SyG1FuycU3OoZqgX7xG_M_Iul7O9Njb4KeXpwYrCvIPcFYhh59I_ogZQ",
     features: ["Switches & Sockets", "Wires & Cables", "MCBs & DBs", "Accessories"],
   },
   {
+    route: 'ev-chargers',
     title: "EV Chargers",
     image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=600&q=80",
     features: ["AC Chargers", "DC Fast Chargers", "Home Solutions", "Commercial Stations"],
@@ -69,7 +73,7 @@ const ProductsPreview = () => {
                   ))}
                 </div>
                 <Link 
-                  to="/products" 
+                  to={`/${product.route}`} 
                   className="inline-flex items-center text-accent font-semibold hover:gap-3 gap-2 transition-all"
                 >
                   View Products <ArrowRight className="w-4 h-4" />

@@ -11,6 +11,10 @@ import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import SolarSystem from "./pages/SolarSystems";
+import EVChargers from "./pages/EVChargers";
+import LEDLighting from "./pages/LEDLighting";
+import ElectricalEquipment from "./pages/ElectricalEquipment";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +32,11 @@ const App = () => (
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          {/* my changes led-lighting electrical-equipment ev-chargers */} 
+          <Route path="/solar-system" element={<SolarSystem />}/>
+          <Route path="/led-lighting" element={<LEDLighting />}/>
+          <Route path="/electrical-equipment" element={<ElectricalEquipment />}/>
+          <Route path="/ev-chargers" element={<EVChargers />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
