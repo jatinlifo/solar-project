@@ -103,10 +103,10 @@ const About = () => {
         <div className="container-wide">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { number: "500+", label: "Projects Completed", icon: Award },
-              { number: "1000+", label: "Happy Customers", icon: Users },
-              { number: "10+", label: "Years Experience", icon: Clock },
-              { number: "50+", label: "Expert Team Members", icon: Users },
+              { number: "50+", label: "Projects Completed", icon: Award },
+              { number: "500+", label: "Happy Customers", icon: Users },
+              { number: "7+", label: "Years Experience", icon: Clock },
+              { number: "15+", label: "Expert Team Members", icon: Users },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
