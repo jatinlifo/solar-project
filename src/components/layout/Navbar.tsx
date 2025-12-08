@@ -78,15 +78,19 @@ const Navbar = () => {
         <div className="container-wide">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-2">
               <div className="">
                 {/* <Zap className="w-7 h-7 text-accent" /> */}
                 <img className="w-[60px]" src="logo3.png" alt="" />
               </div>
               <div>
-                <h1 className="font-display font-bold text-xl text-[#CEA42A] leading-tight">
+                {/* <h1 className="font-display font-bold text-xl text-[#CEA42A] leading-tight">
+                  SHREEJI ENTERPRISES
+                </h1> */}
+                 <h1 className="font-display text-xl font-bold bg-gradient-to-r from-[#0A284E] to-[#CEA42A]  bg-clip-text text-transparent">
                   SHREEJI ENTERPRISES
                 </h1>
+                {/* <
                 {/* <p className="text-xs text-muted-foreground font-medium tracking-wide">
                   
                 </p> */}
