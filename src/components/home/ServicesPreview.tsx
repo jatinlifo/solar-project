@@ -22,7 +22,10 @@ const products = [
     route: 'led-lighting', 
     title: "Plumbing Service & Maintenance",
     image: "/items/2.jpeg",
-    features: ["Pipe Repair", "Leak Detection","Drain Cleaning", "Saver Line, etc."],
+    features: ["New installations",
+      "Commercial plumbing",
+      "Emergency services",
+      "Pipe repairs, etc",],
   },
 ];
 

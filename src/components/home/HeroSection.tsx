@@ -12,7 +12,7 @@ const HeroSection = () => {
       </div>
 
       {/* Grid Pattern */}
-      <div 
+      <div
         className="absolute inset-0 opacity-5"
         style={{
           backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
@@ -75,12 +75,21 @@ const HeroSection = () => {
           <div className="relative hidden lg:block">
             <div className="relative">
               {/* Main Image Container */}
-              <div className="relative w-full aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-primary-foreground/10">
-                <img
+              <div className="relative w-full  rounded-3xl overflow-hidden shadow-2xl border-4 border-primary-foreground/10">
+                {/* <img
                   src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80"
                   alt="Solar panels installation"
                   className="w-full h-full object-cover"
-                />
+                /> */}
+                <video
+                  src="/videos/v1.mp4"
+                  controls
+                  autoPlay
+                  muted
+                  loop
+                  className="w-full max-w-4xl rounded-xl shadow-lg"
+                ></video>
+
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent" />
               </div>
 

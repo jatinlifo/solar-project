@@ -10,10 +10,10 @@ const products = [
     features: ["Solar Panels", "Inverters", "Batteries", "Complete Installations"],
   },
   {
-    route: 'led-lighting', 
-    title: "LED Lighting",
-    image: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=600&q=80",
-    features: ["LED Panels", "Bulbs & Tubes", "Concealed Lighting", "Decorative Lights"],
+    route: 'ev-chargers',
+    title: "EV Chargers",
+    image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=600&q=80",
+    features: ["AC Chargers", "DC Fast Chargers", "Home Solutions", "Commercial Stations"],
   },
   {
     route: 'electrical-equipment',
@@ -22,10 +22,10 @@ const products = [
     features: ["Switches & Sockets", "Wires & Cables", "MCBs & DBs", "Accessories"],
   },
   {
-    route: 'ev-chargers',
-    title: "EV Chargers",
-    image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=600&q=80",
-    features: ["AC Chargers", "DC Fast Chargers", "Home Solutions", "Commercial Stations"],
+    route: 'led-lighting', 
+    title: "LED Lighting",
+    image: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=600&q=80",
+    features: ["LED Panels", "Bulbs & Tubes", "Concealed Lighting", "Decorative Lights"],
   },
 ];
 
