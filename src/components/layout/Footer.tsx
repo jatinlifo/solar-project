@@ -19,9 +19,14 @@ const Footer = () => {
                 {/* <p className="text-xs text-primary-foreground/70 font-medium tracking-wide">ENTERPRISES</p> */}
               </div>
             </Link>
-            <p className="text-primary-foreground/80 leading-relaxed">
-              The Foundation of Growth and Excellence. Your trusted partner for solar systems, electrical solutions, LED lighting, and EV charging infrastructure.
+            <div>
+              <p className="text-primary-foreground/80 text-sm leading-relaxed font-bold italic">
+              "The Foundation of Growth and Excellence"
             </p>
+            <p className="text-primary-foreground/80 leading-relaxed">
+              Your trusted partner for solar systems, electrical solutions, LED lighting, and EV charging infrastructure.
+            </p>
+            </div>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-[#0A284E] transition-colors">
                 <Facebook className="w-5 h-5" />
@@ -44,7 +49,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {["Home", "About Us", "Products", "Services", "Gallery", "Blog", "Contact"].map((item) => (
                 <li key={item}>
-                  <Link 
+                  <Link
                     to={item === "Home" ? "/" : `/${item.toLowerCase().replace(" ", "-").replace("about-us", "about")}`}
                     className="text-primary-foreground/80 hover:text-accent transition-colors"
                   >

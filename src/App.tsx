@@ -15,6 +15,7 @@ import SolarSystem from "./pages/SolarSystems";
 import EVChargers from "./pages/EVChargers";
 import LEDLighting from "./pages/LEDLighting";
 import ElectricalEquipment from "./pages/ElectricalEquipment";
+import Article from "./pages/Article";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/led-lighting" element={<LEDLighting />}/>
           <Route path="/electrical-equipment" element={<ElectricalEquipment />}/>
           <Route path="/ev-chargers" element={<EVChargers />} />
+          <Route path="/article" element={<Article />}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -6,12 +6,12 @@ import { Calendar, User, ArrowRight, Clock } from "lucide-react";
 const blogPosts = [
   {
     id: 1,
-    title: "The Future of Solar Energy: Trends to Watch in 2024",
+    title: "The Future of Solar Energy: Trends to Watch in 2025",
     excerpt: "Discover the latest innovations in solar technology and what they mean for homeowners and businesses looking to go green.",
     image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80",
     category: "Solar Energy",
     author: "Shreeji Team",
-    date: "Nov 20, 2024",
+    date: "Nov 20, 2025",
     readTime: "5 min read",
   },
   {
@@ -21,7 +21,7 @@ const blogPosts = [
     image: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=800&q=80",
     category: "LED Lighting",
     author: "Shreeji Team",
-    date: "Nov 15, 2024",
+    date: "Nov 15, 2025",
     readTime: "4 min read",
   },
   {
@@ -31,7 +31,7 @@ const blogPosts = [
     image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80",
     category: "EV Charging",
     author: "Shreeji Team",
-    date: "Nov 10, 2024",
+    date: "Nov 10, 2025",
     readTime: "6 min read",
   },
   {
@@ -41,7 +41,7 @@ const blogPosts = [
     image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80",
     category: "Electrical",
     author: "Shreeji Team",
-    date: "Nov 5, 2024",
+    date: "Nov 5, 2025",
     readTime: "4 min read",
   },
   {
@@ -51,7 +51,7 @@ const blogPosts = [
     image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=800&q=80",
     category: "Solar Energy",
     author: "Shreeji Team",
-    date: "Oct 28, 2024",
+    date: "Oct 28, 2025",
     readTime: "5 min read",
   },
   {
@@ -61,7 +61,7 @@ const blogPosts = [
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
     category: "LED Lighting",
     author: "Shreeji Team",
-    date: "Oct 22, 2024",
+    date: "Oct 22, 2025",
     readTime: "4 min read",
   },
 ];
@@ -124,9 +124,11 @@ const Blog = () => {
                       <span>{blogPosts[0].readTime}</span>
                     </div>
                   </div>
-                  <Button className="w-fit">
-                    Read Article
-                    <ArrowRight className="w-5 h-5" />
+                  <Button className="w-fit flex items-center gap-2" asChild>
+                    <Link to="/article">
+                      Read Article
+                      <ArrowRight className="w-5 h-5" />
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -136,7 +138,7 @@ const Blog = () => {
           {/* Blog Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.slice(1).map((post) => (
-              <article 
+              <article
                 key={post.id}
                 className="bg-card rounded-2xl overflow-hidden shadow-soft border border-border hover:shadow-lg transition-shadow group"
               >
