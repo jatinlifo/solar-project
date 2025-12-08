@@ -3,19 +3,19 @@ import { Phone, Mail, MapPin, Zap, Facebook, Twitter, Linkedin, Instagram } from
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-primary-foreground">
+    <footer className="bg-gray-950 text-primary-foreground">
       {/* Main Footer */}
       <div className="container-wide section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-glow">
+              <div className="">
                 {/* <Zap className="w-7 h-7 text-accent" /> */}
-                <img className="" src="logo3.png" alt="" />
+                <img className="w-[50px]" src="logo3.png" alt="" />
               </div>
               <div>
-                <h3 className="font-display font-bold text-xl text-[#CEA42A]">SHREEJI ENTERPRISES</h3>
+                <h3 className="font-display text-xl font-bold bg-gradient-to-r from-[#0A284E] to-[#CEA42A] bg-clip-text text-transparent">SHREEJI ENTERPRISES</h3>
                 {/* <p className="text-xs text-primary-foreground/70 font-medium tracking-wide">ENTERPRISES</p> */}
               </div>
             </Link>
