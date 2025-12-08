@@ -94,7 +94,7 @@ const HeroSection = () => {
               </div>
 
               {/* Floating Cards */}
-              <div className="absolute -left-8 top-1/4 bg-card p-4 rounded-xl shadow-lg animate-float">
+              <div className="absolute -left-8 -top-12 bg-card p-4 rounded-xl shadow-lg animate-float">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center">
                     <Sun className="w-6 h-6 text-accent" />
@@ -106,7 +106,7 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              <div className="absolute -right-4 bottom-1/4 bg-card p-4 rounded-xl shadow-lg animate-float" style={{ animationDelay: '2s' }}>
+              <div className="absolute -right-36 bottom-1/4 bg-card p-4 rounded-xl shadow-lg animate-float" style={{ animationDelay: '2s' }}>
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
                     <Zap className="w-6 h-6 text-primary" />
@@ -118,7 +118,7 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              <div className="absolute -bottom-4 left-1/4 bg-card p-4 rounded-xl shadow-lg animate-float" style={{ animationDelay: '4s' }}>
+              <div className="absolute -bottom-16 left-1/4 bg-card p-4 rounded-xl shadow-lg animate-float" style={{ animationDelay: '4s' }}>
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center">
                     <Shield className="w-6 h-6 text-green-600" />

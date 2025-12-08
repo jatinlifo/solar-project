@@ -13,13 +13,13 @@ import {
 
 const products = [
   {
-    route: 'solar-system',
+    route: 'solar-service',
     title: "Electrical Service & Maintenance ",
     image: "/items/1.jpeg",
     features: ["Solar Panels", "Inverters", "Batteries", "EV Charger, etc."],
   },
   {
-    route: 'led-lighting', 
+    route: 'plumbing-service', 
     title: "Plumbing Service & Maintenance",
     image: "/items/2.jpeg",
     features: ["New installations",
@@ -28,7 +28,7 @@ const products = [
       "Pipe repairs, etc",],
   },
   {
-    route: 'led-lighting', 
+    route: 'amc-service', 
     title: "Annual Maintenance Contract",
     image: "/items/3.jpeg",
     features: ["Preventive Service",
@@ -86,12 +86,12 @@ const ServicesPreview = () => {
                     </div>
                   ))}
                 </div>
-                {/* <Link 
+                <Link 
                   to={`/${product.route}`} 
                   className="inline-flex items-center text-accent font-semibold hover:gap-3 gap-2 transition-all"
                 >
-                  View Products <ArrowRight className="w-4 h-4" />
-                </Link> */}
+                  View Service <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             </div>
           ))}
