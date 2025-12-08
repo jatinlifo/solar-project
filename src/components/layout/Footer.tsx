@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Zap, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { title } from "process";
 
 const Footer = () => {
   return (
@@ -64,10 +65,13 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-bold text-lg mb-6">Our Products</h4>
             <ul className="space-y-3">
-              {["Solar Systems", "LED Lighting", "Electrical Equipment", "EV Chargers"].map((item) => (
-                <li key={item}>
-                  <Link to="/products" className="text-primary-foreground/80 hover:text-accent transition-colors">
-                    {item}
+              {[{title : "Solar Systems", route: "solar-system"}, {title: "LED Lighting", route: "led-lighting"}, {title:"Electrical Equipment", route: "electrical-equipment"},
+               {title: "EV Chargers", route: "ev-chargers"}, {title: "Electrical Service", route: "electrical-service"}, {title: "Plumbing Service", route:"plumbing-service"},
+               {title: "AMC Service", route: "amc-service"}].
+               map((item) => (
+                <li key={item.title}>
+                  <Link to={`/${item.route}`} className="text-primary-foreground/80 hover:text-accent transition-colors">
+                    {item.title}
                   </Link>
                 </li>
               ))}

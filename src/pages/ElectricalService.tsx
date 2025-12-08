@@ -100,7 +100,7 @@ const services = [
   },
 ];
 
-const SolarService = () => {
+const ElectricalService = () => {
   return (
     <Layout>
       {/* Hero Section */}
@@ -196,4 +196,4 @@ const SolarService = () => {
   );
 };
 
-export default SolarService;
+export default ElectricalService;

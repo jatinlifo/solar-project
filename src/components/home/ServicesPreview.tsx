@@ -13,7 +13,7 @@ import {
 
 const products = [
   {
-    route: 'solar-service',
+    route: 'electrical-service',
     title: "Electrical Service & Maintenance ",
     image: "/items/1.jpeg",
     features: ["Solar Panels", "Inverters", "Batteries", "EV Charger, etc."],
@@ -77,7 +77,7 @@ const ServicesPreview = () => {
               </div>
               
               <div className="absolute bottom-0 left-0 right-0 p-6 text-primary-foreground">
-                <h3 className="font-display text-yellow-400 text-2xl font-bold mb-4">{product.title}</h3>
+                <h3 className="font-display  text-2xl font-bold mb-4">{product.title}</h3>
                 <div className="grid grid-cols-2 gap-2 mb-4">
                   {product.features.map((feature) => (
                     <div key={feature} className="flex items-center gap-2 text-sm">

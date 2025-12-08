@@ -31,7 +31,7 @@ const About = () => {
               <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
                 Our Story
               </span>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6">
                 A Legacy of Trust & Quality
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -48,15 +48,52 @@ const About = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=800&q=80"
+                src="/About-images/1.jpeg"
                 alt="Team at work"
                 className="rounded-2xl shadow-lg"
               />
-              <div className="absolute -bottom-8 -left-8 bg-accent p-6 rounded-2xl shadow-lg">
+              {/* <div className="absolute -bottom-8 -left-8 bg-accent p-6 rounded-2xl shadow-lg">
                 <p className="text-4xl font-bold text-foreground">7+</p>
                 <p className="text-foreground/80">Years of Excellence</p>
+              </div> */}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className=" bg-background">
+        <div className="container-wide">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+                Our Story
+              </span>
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6">
+                Servic and Maintenace are Reliable
+              </h2>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  Welcome to Shriji Enterprises. Our electrical maintenance services include regular inspection, testing, and servicing of your electrical systems to ensure they are functioning correctly and safely. Our certified professionals conduct thorough on-site inspections to identify potential problems such as faulty wiring, overloaded circuits, and other electrical issues that could lead to equipment failure and downtime.
+                </p>
+                <p>
+                  Our goal is to provide all our clients with reliable and cost-effective electrical engineering solutions and systems. We specialize in understanding project requirements and working with clients from the initial stages to address their key needs in design, execution, vendor selection, and electrical safety issues.
+                </p>
+                <p>
+                  The process of installing and maintaining electrical systems and equipment. This may include tasks such as installing wiring, repairing or replacing faulty equipment, and inspecting electrical systems for safety.
+                </p>
               </div>
             </div>
+            {/* <div className="relative"> */}
+              <img
+                src="/About-images/2.jpeg"
+                alt="Team at work"
+                className="rounded-2xl shadow-lg"
+              />
+              {/* <div className="absolute -bottom-8 -left-8 bg-accent p-6 rounded-2xl shadow-lg">
+                <p className="text-4xl font-bold text-foreground">7+</p>
+                <p className="text-foreground/80">Years of Excellence</p>
+              </div> */}
+            {/* </div> */}
           </div>
         </div>
       </section>

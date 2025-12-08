@@ -20,7 +20,7 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="container-wide relative z-10">
+      <div className="container-wide relative z-10 grid grid-cols-1">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-primary-foreground space-y-8">
@@ -72,7 +72,7 @@ const HeroSection = () => {
           </div>
 
           {/* Hero Visual */}
-          <div className="relative hidden lg:block">
+          <div className="relative">
             <div className="relative">
               {/* Main Image Container */}
               <div className="relative w-full  rounded-3xl overflow-hidden shadow-2xl border-4 border-primary-foreground/10">

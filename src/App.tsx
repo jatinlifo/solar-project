@@ -16,7 +16,7 @@ import EVChargers from "./pages/EVChargers";
 import LEDLighting from "./pages/LEDLighting";
 import ElectricalEquipment from "./pages/ElectricalEquipment";
 import Article from "./pages/Article";
-import SolarService from "./pages/SolarService";
+import ElectricalService from "./pages/ElectricalService";
 import PlumberService from "./pages/PlumberService";
 import AMCService from "./pages/AMCService";
 
@@ -42,7 +42,7 @@ const App = () => (
           <Route path="/electrical-equipment" element={<ElectricalEquipment />}/>
           <Route path="/ev-chargers" element={<EVChargers />} />
           <Route path="/article" element={<Article />}/>
-          <Route path="/solar-service" element={<SolarService />}/>
+          <Route path="/electrical-service" element={<ElectricalService />}/>
           <Route path="/plumbing-service" element={<PlumberService />}/>
           <Route path="/amc-service" element={<AMCService />}/>
           <Route path="*" element={<NotFound />} />
