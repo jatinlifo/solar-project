@@ -14,15 +14,15 @@ import {
 const products = [
   {
     route: 'solar-system',
-    title: "Service and Maintenance",
+    title: "Electrical Service & Maintenance ",
     image: "/items/1.jpeg",
-    features: ["Solar Panels", "Inverters", "Batteries", "Complete Installations"],
+    features: ["Solar Panels", "Inverters", "Batteries", "EV Charger, etc."],
   },
   {
     route: 'led-lighting', 
-    title: "Service and Maintenance",
-    image: "/items/1.jpeg",
-    features: ["LED Panels", "Bulbs & Tubes", "Concealed Lighting", "Decorative Lights"],
+    title: "Plumbing Service & Maintenance",
+    image: "/items/2.jpeg",
+    features: ["Pipe Repair", "Leak Detection","Drain Cleaning", "Saver Line, etc."],
   },
 ];
 
