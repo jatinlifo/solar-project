@@ -79,9 +79,9 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 flex items-center justify-center shadow-glow">
+              <div className="">
                 {/* <Zap className="w-7 h-7 text-accent" /> */}
-                <img className="" src="logo3.png" alt="" />
+                <img className="w-[60px]" src="logo3.png" alt="" />
               </div>
               <div>
                 <h1 className="font-display font-bold text-xl text-foreground leading-tight">
