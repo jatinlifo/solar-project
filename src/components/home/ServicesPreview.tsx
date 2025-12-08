@@ -7,52 +7,29 @@ import {
   Car,
   Wrench,
   Droplets,
-  ArrowRight
+  ArrowRight,
+  CheckCircle
 } from "lucide-react";
 
-const services = [
+const products = [
   {
-    icon: Sun,
-    title: "Solar Installation",
-    description: "Complete solar system installation and maintenance for residential and commercial properties.",
-    color: "bg-accent/10 text-accent",
+    route: 'solar-system',
+    title: "Service and Maintenance",
+    image: "/items/1.jpeg",
+    features: ["Solar Panels", "Inverters", "Batteries", "Complete Installations"],
   },
-  // {
-  //   icon: Lightbulb,
-  //   title: "LED Lighting Setup",
-  //   description: "Energy-efficient LED lighting solutions including panels, decorative, and concealed lighting.",
-  //   color: "bg-primary/10 text-primary",
-  // },
-  // {
-  //   icon: Plug,
-  //   title: "Electrical Work",
-  //   description: "Professional electrical wiring, panel installation, and commercial electrical services.",
-  //   color: "bg-blue-500/10 text-blue-600",
-  // },
-  // {
-  //   icon: Car,
-  //   title: "EV Charger Installation",
-  //   description: "Home and commercial EV charging station installation with AC & DC options.",
-  //   color: "bg-green-500/10 text-green-600",
-  // },
-  // {
-  //   icon: Wrench,
-  //   title: "Repair & Maintenance",
-  //   description: "Expert fault finding, repair services, and regular maintenance for all electrical systems.",
-  //   color: "bg-orange-500/10 text-orange-600",
-  // },
-  // {
-  //   icon: Droplets,
-  //   title: "Plumbing Services",
-  //   description: "Comprehensive domestic and commercial plumbing solutions.",
-  //   color: "bg-cyan-500/10 text-cyan-600",
-  // },
+  {
+    route: 'led-lighting', 
+    title: "Service and Maintenance",
+    image: "/items/1.jpeg",
+    features: ["LED Panels", "Bulbs & Tubes", "Concealed Lighting", "Decorative Lights"],
+  },
 ];
 
 const ServicesPreview = () => {
   return (
 
-    <section className="section-padding bg-secondary ">
+    <section className="p-3 bg-secondary ">
       <div className="container-wide">
 
         {/* Header */}
@@ -70,43 +47,51 @@ const ServicesPreview = () => {
           </p>
         </div>
 
-        {/* Responsive Card */}
-        <div className="max-w-6xl mx-auto bg-gray-900 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row">
-
-          {/* Left Image */}
-          <div className="w-full md:w-1/2 h-60 md:h-auto">
-            <img
-              src="items/1.jpeg"
-              alt="Solar Solution"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Right Content */}
-          <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-center text-left">
-
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">
-              Smart Electrical & Solar Solutions
-            </h2>
-
-            <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
-              We deliver advanced electrical and solar power solutions designed for modern
-              homes, commercial spaces, and industrial applications. Our systems ensure
-              reliable performance, energy efficiency, and long-term sustainability.
-            </p>
-
-            <div className="mt-auto">
-              <Button variant="accent" size="lg" asChild className="flex items-center gap-2 w-fit">
-                <Link to="/services">
-                  View All Services
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </Button>
+        {/* Products Grid */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {products.map((product, index) => (
+            <div
+              key={product.title}
+              className="group relative bg-card rounded-2xl overflow-hidden shadow-soft hover:shadow-lg transition-all duration-300 border border-border"
+            >
+              <div className="aspect-video overflow-hidden">
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
+              </div>
+              
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-primary-foreground">
+                <h3 className="font-display text-2xl font-bold mb-4">{product.title}</h3>
+                <div className="grid grid-cols-2 gap-2 mb-4">
+                  {product.features.map((feature) => (
+                    <div key={feature} className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="w-4 h-4 text-accent flex-shrink-0" />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                {/* <Link 
+                  to={`/${product.route}`} 
+                  className="inline-flex items-center text-accent font-semibold hover:gap-3 gap-2 transition-all"
+                >
+                  View Products <ArrowRight className="w-4 h-4" />
+                </Link> */}
+              </div>
             </div>
-
-          </div>
+          ))}
         </div>
-
+         {/* CTA */}
+        <div className="text-center mt-12">
+          <Button variant="accent" size="lg" asChild>
+            <Link to="/products">
+               All Services
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
 
