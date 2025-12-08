@@ -53,7 +53,7 @@ const About = () => {
                 className="rounded-2xl shadow-lg"
               />
               <div className="absolute -bottom-8 -left-8 bg-accent p-6 rounded-2xl shadow-lg">
-                <p className="text-4xl font-bold text-foreground">10+</p>
+                <p className="text-4xl font-bold text-foreground">7+</p>
                 <p className="text-foreground/80">Years of Excellence</p>
               </div>
             </div>
