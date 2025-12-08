@@ -31,7 +31,7 @@ const HeroSection = () => {
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               SHREEJI{" "}
-              <span className="text-accent">ENTERPRISES</span>
+              <span className="text-[#CEA42A]">ENTERPRISES</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-primary-foreground/90 font-medium italic">
@@ -57,15 +57,15 @@ const HeroSection = () => {
             {/* Stats */}
             <div className="flex flex-wrap gap-8 pt-8 border-t border-primary-foreground/20">
               <div>
-                <p className="text-3xl font-bold text-accent">500+</p>
+                <p className="text-3xl font-bold text-accent">50+</p>
                 <p className="text-sm text-primary-foreground/70">Projects Completed</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-accent">10+</p>
+                <p className="text-3xl font-bold text-accent">7+</p>
                 <p className="text-sm text-primary-foreground/70">Years Experience</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-accent">1000+</p>
+                <p className="text-3xl font-bold text-accent">500+</p>
                 <p className="text-sm text-primary-foreground/70">Happy Customers</p>
               </div>
             </div>

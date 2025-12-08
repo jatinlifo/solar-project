@@ -84,7 +84,7 @@ const Navbar = () => {
                 <img className="w-[60px]" src="logo3.png" alt="" />
               </div>
               <div>
-                <h1 className="font-display font-bold text-xl text-foreground leading-tight">
+                <h1 className="font-display font-bold text-xl text-[#CEA42A] leading-tight">
                   SHREEJI ENTERPRISES
                 </h1>
                 {/* <p className="text-xs text-muted-foreground font-medium tracking-wide">

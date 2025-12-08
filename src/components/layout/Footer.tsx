@@ -15,7 +15,7 @@ const Footer = () => {
                 <img className="" src="logo3.png" alt="" />
               </div>
               <div>
-                <h3 className="font-display font-bold text-xl">SHREEJI ENTERPRISES</h3>
+                <h3 className="font-display font-bold text-xl text-[#CEA42A]">SHREEJI ENTERPRISES</h3>
                 {/* <p className="text-xs text-primary-foreground/70 font-medium tracking-wide">ENTERPRISES</p> */}
               </div>
             </Link>
