@@ -20,11 +20,11 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="container-wide relative z-10 grid grid-cols-1">
+      <div className="container-wide relative z-10 mb-12 grid grid-cols-1">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div className="text-primary-foreground space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-foreground/10 rounded-full border border-primary-foreground/20 backdrop-blur-sm">
+          <div className="text-primary-foreground space-y-8 order-2 md:order-1">
+            <div className="lg:inline-flex hidden  items-center gap-2 px-4 py-2 bg-primary-foreground/10 rounded-full border border-primary-foreground/20 backdrop-blur-sm">
               <Sun className="w-4 h-4 text-accent" />
               <span className="text-sm font-medium">Powering Sustainable Future</span>
             </div>
@@ -72,7 +72,7 @@ const HeroSection = () => {
           </div>
 
           {/* Hero Visual */}
-          <div className="relative">
+          <div className="relative order-1 md:order-2 mt-16 md:p-0 ">
             <div className="relative">
               {/* Main Image Container */}
               <div className="relative w-full  rounded-3xl overflow-hidden shadow-2xl border-4 border-primary-foreground/10">
@@ -94,38 +94,38 @@ const HeroSection = () => {
               </div>
 
               {/* Floating Cards */}
-              <div className="absolute -left-8 -top-12 bg-card p-4 rounded-xl shadow-lg animate-float">
+              <div className="absolute md:-left-8 -left-2 -top-8 md:-top-12 bg-card md:p-4 p-1.5 rounded-xl shadow-lg animate-float">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center">
+                  <div className="md:w-12 w-2 h-2 md:h-12 bg-accent/20 rounded-lg flex items-center justify-center">
                     <Sun className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Solar Energy</p>
-                    <p className="font-bold text-foreground">Clean Power</p>
+                    <p className="md:text-sm text-[11px] text-muted-foreground">Solar Energy</p>
+                    <p className="md:text-sm text-[12px] font-bold text-foreground">Clean Power</p>
                   </div>
                 </div>
               </div>
 
-              <div className="absolute -right-36 bottom-1/4 bg-card p-4 rounded-xl shadow-lg animate-float" style={{ animationDelay: '2s' }}>
+              <div className="absolute md:-right-26 -right-5 bottom-16 md:bottom-1/4 bg-card p-1.5 md:p-4 rounded-xl shadow-lg animate-float" style={{ animationDelay: '2s' }}>
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                  <div className="md:w-12 w-2 h-2 md:h-12 bg-primary/20 rounded-lg flex items-center justify-center">
                     <Zap className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">EV Charging</p>
-                    <p className="font-bold text-foreground">Fast & Safe</p>
+                    <p className="md:text-sm text-[11px] text-muted-foreground">EV Charging</p>
+                    <p className="font-bold md:text-sm text-[12px] text-foreground">Fast & Safe</p>
                   </div>
                 </div>
               </div>
 
-              <div className="absolute -bottom-16 left-1/4 bg-card p-4 rounded-xl shadow-lg animate-float" style={{ animationDelay: '4s' }}>
+              <div className="absolute md:-bottom-14 -bottom-12 left-1/4 bg-card md:p-4 p-1.5 rounded-xl shadow-lg animate-float" style={{ animationDelay: '4s' }}>
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center">
+                  <div className="md:w-12 w-2 h-2 md:h-12 bg-green-500/20 rounded-lg flex items-center justify-center">
                     <Shield className="w-6 h-6 text-green-600" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Certified</p>
-                    <p className="font-bold text-foreground">Quality Assured</p>
+                    <p className="md:text-sm text-[11px] text-muted-foreground">Certified</p>
+                    <p className="font-bold md:text-sm text-[12px] text-foreground">Quality Assured</p>
                   </div>
                 </div>
               </div>
