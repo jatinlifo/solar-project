@@ -68,7 +68,7 @@ const ProductsPreview = () => {
                   {product.features.map((feature) => (
                     <div key={feature} className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-accent flex-shrink-0" />
-                      <span className="">{feature}</span>
+                      <span className="md:text-sm text-[10px]">{feature}</span>
                     </div>
                   ))}
                 </div>
