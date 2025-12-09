@@ -76,9 +76,9 @@ const ServicesPreview = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
               </div>
               
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-primary-foreground">
+              <div className="absolute bottom-0 left-0 right-0 p-6 py-2  text-primary-foreground">
                 <h3 className="font-display text-xl md:text-2xl font-bold  md:mb-4">{product.title}</h3>
-                <div className="grid grid-cols-2 gap-2  md:mb-4">
+                <div className="grid grid-cols-2 gap-2   md:mb-4">
                   {product.features.map((feature) => (
                     <div key={feature} className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-accent flex-shrink-0" />
