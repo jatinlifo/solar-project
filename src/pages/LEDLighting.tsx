@@ -167,7 +167,7 @@ const LEDLighting = () => {
                                         images.length > 0 ? images[currentIndex % images.length] : "";
 
                                     return (
-                                        <div className="relative rounded-2xl overflow-hidden shadow-lg w-full min-h-[260px]">
+                                        <div className="relative rounded-2xl overflow-hidden shadow-lg w-full h-[220px] md:h-[360px]">
                                             {currentImage && (
                                                 <img
                                                     src={currentImage}
