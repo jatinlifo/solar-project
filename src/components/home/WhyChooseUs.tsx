@@ -66,10 +66,10 @@ const WhyChooseUs = () => {
               <div className="md:w-14 w-10 h-10 md:h-14 bg-accent/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <feature.icon className="md:w-7 w-5 h-5 md:h-7 text-accent" />
               </div>
-              <h3 className="font-display md:text-xl text-[13px] font-bold text-primary-foreground mb-3">
+              <h3 className="font-display md:text-xl text-[11px] font-bold text-primary-foreground mb-3">
                 {feature.title}
               </h3>
-              <p className="text-primary-foreground/80 text-[10px] md:text-sm leading-relaxed">
+              <p className="text-primary-foreground/80 text-[9px] md:text-sm leading-relaxed">
                 {feature.description}
               </p>
             </div>
