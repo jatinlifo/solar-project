@@ -203,3 +203,11 @@
     50% { transform: translateY(-10px); }
   }
 }
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+video::-webkit-media-controls-panel {
+  display: none !important;
+}

@@ -41,7 +41,7 @@ const productCategories = [
     },
     {
         icon: Home,
-        title: "Home EV Chargers",
+        title: "E-Rickshaw Chargers",
         description: "Compact and reliable EV chargers specially designed for daily home charging needs.",
         images: ["https://tse2.mm.bing.net/th/id/OIP.ys7QMg6kPCoz_5ktvtA-EwHaFj?pid=Api&h=220&P=0"],
         products: [
@@ -55,7 +55,7 @@ const productCategories = [
     },
     {
         icon: Building2,
-        title: "Commercial EV Chargers",
+        title: "Two Wheeler Chargers",
         description: "Heavy-duty EV charging solutions for offices, malls, hotels, and parking areas.",
         images: ["https://tse2.mm.bing.net/th/id/OIP.kB2i0bmad_wM9UOlYmcFJQHaEs?pid=Api&h=220&P=0"],
         products: [
@@ -86,42 +86,30 @@ const productCategories = [
 
 const EVChargers = () => {
 
-    const [currentIndexes, setCurrentIndexes] = useState(
-        productCategories.map(() => 0)
-    );
-    // return next image index
-    const handleNextImage = (categoryIndex: number) => {
-        setCurrentIndexes((prev) => {
-            const updated = [...prev];
-            const category = productCategories[categoryIndex];
+    const [currentIndexes, setCurrentIndexes] = useState<number[]>(
+    productCategories.map(() => 0)
+  );
+  
+  // return next images index
+  const handleNextImages = (categoryIndex: number) => {
+    setCurrentIndexes((prev) => {
+      const updated = [...prev];
+      const totalImages = productCategories[categoryIndex].images.length;
+      updated[categoryIndex] = (updated[categoryIndex] + 1) % totalImages;
+      return updated;
+    });
+  };
+  // return prev images index
+  const handlePrevImages = (categoryIndex: number) => {
+    setCurrentIndexes((prev) => {
+      const updated = [...prev];
+      const totalImages = productCategories[categoryIndex].images.length;
+      updated[categoryIndex] =
+        (updated[categoryIndex] - 1 + totalImages) % totalImages;
+      return updated;
+    });
+  };
 
-            // ✅ images agar hai to use, warna single image ko array bana do
-            const images =
-                (category as any).images ??
-                ((category as any).image ? [(category as any).image] : []);
-
-            const totalImages = images.length || 1;
-            updated[categoryIndex] = (updated[categoryIndex] + 1) % totalImages;
-            return updated;
-        });
-    }
-
-    //return previous image index
-    const handlePrevImages = (categoryIndex: number) => {
-        setCurrentIndexes((prev) => {
-            const updated = [...prev];
-            const category = productCategories[categoryIndex];
-
-            const images =
-                (category as any).images ??
-                ((category as any).image ? [(category as any).image] : []);
-
-            const totalImages = images.length || 1;
-            updated[categoryIndex] =
-                (updated[categoryIndex] - 1 + totalImages) % totalImages;
-            return updated;
-        });
-    };
     return (
         <Layout>
             {/* Hero Section */}
@@ -181,10 +169,7 @@ const EVChargers = () => {
                             <div className={`relative ${index % 2 === 1 ? "lg:order-1" : ""}`}>
                                 {(() => {
                                     // ✅ yaha par bhi support both: images[] ya image
-                                    const images =
-                                        (category as any).images ??
-                                        ((category as any).image ? [(category as any).image] : []);
-
+                                    const images = category.images;
                                     const currentIndex = currentIndexes[index] ?? 0;
                                     const currentImage =
                                         images.length > 0 ? images[currentIndex % images.length] : "";
@@ -195,6 +180,7 @@ const EVChargers = () => {
                                                 <img
                                                     src={currentImage}
                                                     alt={category.title}
+                                                    loading="lazy"
                                                     className="w-full h-full object-cover"
                                                 />
                                             )}
@@ -211,7 +197,7 @@ const EVChargers = () => {
                                             {/* ▶ Next */}
                                             <button
                                                 type="button"
-                                                onClick={() => handleNextImage(index)}
+                                                onClick={() => handleNextImages(index)}
                                                 className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 text-white px-2 py-2 rounded-full md:text-base"
                                             >
                                             <ChevronRight className="w-5 h-5" />

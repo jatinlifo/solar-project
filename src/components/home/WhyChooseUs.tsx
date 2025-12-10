@@ -57,19 +57,19 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div
               key={feature.title}
               className="group bg-primary-foreground/10 backdrop-blur-sm p-8 rounded-2xl border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-all duration-300"
             >
-              <div className="w-14 h-14 bg-accent/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <feature.icon className="w-7 h-7 text-accent" />
+              <div className="md:w-14 w-10 h-10 md:h-14 bg-accent/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <feature.icon className="md:w-7 w-5 h-5 md:h-7 text-accent" />
               </div>
-              <h3 className="font-display text-xl font-bold text-primary-foreground mb-3">
+              <h3 className="font-display md:text-xl text-[12px]   font-bold text-primary-foreground mb-3">
                 {feature.title}
               </h3>
-              <p className="text-primary-foreground/80 leading-relaxed">
+              <p className="text-primary-foreground/80 text-[8px] md:text-sm leading-relaxed">
                 {feature.description}
               </p>
             </div>

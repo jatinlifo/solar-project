@@ -1,14 +1,15 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Sun, Battery, CheckCircle, ArrowRight, Zap } from "lucide-react";
+import { Sun, Battery, CheckCircle, ArrowRight, Zap, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 const productCategories = [
     {
         icon: Sun,
         title: "Solar Systems",
         description: "Complete solar energy solutions for residential and commercial applications.",
-        image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80",
+        images: ["https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80"],
         products: [
             "Monocrystalline Solar Panels",
             "Polycrystalline Solar Panels",
@@ -23,7 +24,7 @@ const productCategories = [
         icon: Zap,
         title: "Inverter Air Conditioners",
         description: "Energy efficient inverter AC solutions for homes, offices, and commercial spaces.",
-        image: "https://image.made-in-china.com/2f0j00RloGcdOySMkq/30kw-AC-Inverter-3-Phase-30kw-Three-Phase-Pure-Sine-Wave-Solar-Inverter.jpg",
+        images: ["https://image.made-in-china.com/2f0j00RloGcdOySMkq/30kw-AC-Inverter-3-Phase-30kw-Three-Phase-Pure-Sine-Wave-Solar-Inverter.jpg"],
         products: [
             "1 Ton Inverter AC",
             "1.5 Ton Inverter AC",
@@ -38,7 +39,7 @@ const productCategories = [
         icon: Battery,
         title: "Batteries",
         description: "Reliable and long-lasting battery solutions for solar systems, inverters, and backup power.",
-        image: "https://www.kindpng.com/picc/m/137-1372233_battery-png-image-transparent-background-exide-battery-images.png",
+        images: ["https://www.kindpng.com/picc/m/137-1372233_battery-png-image-transparent-background-exide-battery-images.png"],
         products: [
             "Solar Batteries",
             "Inverter Batteries",
@@ -52,6 +53,31 @@ const productCategories = [
 ];
 
 const SolarSystem = () => {
+
+    const [currentIndexes, setCurrentIndexes] = useState<number[]>(
+      productCategories.map(() => 0)
+    );
+    
+    // return next images index
+    const handleNextImages = (categoryIndex: number) => {
+      setCurrentIndexes((prev) => {
+        const updated = [...prev];
+        const totalImages = productCategories[categoryIndex].images.length;
+        updated[categoryIndex] = (updated[categoryIndex] + 1) % totalImages;
+        return updated;
+      });
+    };
+    // return prev images index
+    const handlePrevImages = (categoryIndex: number) => {
+      setCurrentIndexes((prev) => {
+        const updated = [...prev];
+        const totalImages = productCategories[categoryIndex].images.length;
+        updated[categoryIndex] =
+          (updated[categoryIndex] - 1 + totalImages) % totalImages;
+        return updated;
+      });
+    };
+
     return (
         <Layout>
             {/* Hero Section */}
@@ -109,12 +135,59 @@ const SolarSystem = () => {
                                 </Button>
                             </div>
                             <div className={`relative ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                                <img
-                                    src={category.image}
-                                    alt={category.title}
-                                    className="rounded-2xl shadow-lg w-full"
+                                {(() => {
+                                    // ✅ yaha par bhi support both: images[] ya image
+                                    const images = category.images
+
+                                    const currentIndex = currentIndexes[index] ?? 0;
+                                    const currentImage =
+                                        images.length > 0 ? images[currentIndex % images.length] : "";
+
+                                    return (
+                                        <div className="relative rounded-2xl overflow-hidden shadow-lg w-full min-h-[260px]">
+                                            {currentImage && (
+                                                <img
+                                                    src={currentImage}
+                                                    alt={category.title}
+                                                    className="w-full h-full object-cover"
+                                                />
+                                            )}
+
+                                            {/* ◀ Prev */}
+                                            <button
+                                                type="button"
+                                                onClick={() => handlePrevImages(index)}
+                                                className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 text-white px-2 py-2 rounded-full md:text-base"
+                                            >
+                                                <ChevronLeft className="w-5 h-5" />
+                                            </button>
+
+                                            {/* ▶ Next */}
+                                            <button
+                                                type="button"
+                                                onClick={() => handleNextImages(index)}
+                                                className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 text-white px-2 py-2 rounded-full md:text-base"
+                                            >
+                                                <ChevronRight className="w-5 h-5" />
+                                            </button>
+
+                                            {/* dots (optional) */}
+                                            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+                                                {images.map((_: any, imgIndex: number) => (
+                                                    <span
+                                                        key={imgIndex}
+                                                        className={`w-2 h-2 rounded-full ${imgIndex === currentIndex ? "bg-white" : "bg-white/40"
+                                                            }`}
+                                                    />
+                                                ))}
+                                            </div>
+                                        </div>
+                                    );
+                                })()}
+
+                                <div
+                                    className={`absolute -bottom-4 -right-4 w-24 h-24 ${category.color} rounded-xl -z-10`}
                                 />
-                                <div className={`absolute -bottom-4 -right-4 w-24 h-24 ${category.color} rounded-xl -z-10`} />
                             </div>
                         </div>
                     ))}

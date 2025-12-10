@@ -1,14 +1,15 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Wrench, ShieldCheck, Plug, Cable, CheckCircle, ArrowRight } from "lucide-react";
+import { Wrench, ShieldCheck, Plug, Cable, CheckCircle, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 const productCategories = [
     {
         icon: Plug,
         title: "Switches & Sockets",
         description: "Premium quality electrical switches and sockets for safe, stylish, and reliable power connections.",
-        image: "https://tse4.mm.bing.net/th/id/OIP.IkWz2TLSYeQcd3_nGdMDXQHaE8?pid=Api&h=220&P=0",
+        images: ["https://tse4.mm.bing.net/th/id/OIP.IkWz2TLSYeQcd3_nGdMDXQHaE8?pid=Api&h=220&P=0"],
         products: [
             "Modular Switches",
             "Electrical Sockets",
@@ -24,7 +25,7 @@ const productCategories = [
         icon: Cable,
         title: "Wires & Cables",
         description: "High quality electrical wires and cables for safe power transmission in residential and commercial installations.",
-        image: "https://png.pngtree.com/background/20230527/original/pngtree-wires-and-cables-in-various-colors-picture-image_2758680.jpg",
+        images: ["https://png.pngtree.com/background/20230527/original/pngtree-wires-and-cables-in-various-colors-picture-image_2758680.jpg"],
         products: [
             "House Wiring Cables",
             "Industrial Power Cables",
@@ -40,7 +41,7 @@ const productCategories = [
         icon: ShieldCheck,
         title: "MCB & DBs",
         description: "High quality MCBs and Distribution Boards for electrical safety, overload protection, and power management.",
-        image: "https://bchindia.com/wp-content/uploads/2020/03/bch.jpg",
+        images: ["https://bchindia.com/wp-content/uploads/2020/03/bch.jpg"],
         products: [
             "Single Pole MCB",
             "Double Pole MCB",
@@ -56,7 +57,7 @@ const productCategories = [
         icon: Wrench,
         title: "Electrical Accessories",
         description: "Complete range of electrical accessories for safe installation, maintenance, and finishing of electrical systems.",
-        image: "https://i.ytimg.com/vi/wDkV53iD5eI/maxresdefault.jpg",
+        images: ["https://i.ytimg.com/vi/wDkV53iD5eI/maxresdefault.jpg"],
         products: [
             "Ceiling Roses",
             "Angle Holders",
@@ -71,6 +72,31 @@ const productCategories = [
 ];
 
 const ElectricalEquipment = () => {
+
+      const [currentIndexes, setCurrentIndexes] = useState<number[]>(
+        productCategories.map(() => 0)
+      );
+      
+      // return next images index
+      const handleNextImages = (categoryIndex: number) => {
+        setCurrentIndexes((prev) => {
+          const updated = [...prev];
+          const totalImages = productCategories[categoryIndex].images.length;
+          updated[categoryIndex] = (updated[categoryIndex] + 1) % totalImages;
+          return updated;
+        });
+      };
+      // return prev images index
+      const handlePrevImages = (categoryIndex: number) => {
+        setCurrentIndexes((prev) => {
+          const updated = [...prev];
+          const totalImages = productCategories[categoryIndex].images.length;
+          updated[categoryIndex] =
+            (updated[categoryIndex] - 1 + totalImages) % totalImages;
+          return updated;
+        });
+      };
+
     return (
         <Layout>
             {/* Hero Section */}
@@ -128,12 +154,58 @@ const ElectricalEquipment = () => {
                                 </Button>
                             </div>
                             <div className={`relative ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                                <img
-                                    src={category.image}
-                                    alt={category.title}
-                                    className="rounded-2xl shadow-lg w-full"
+                                {(() => {
+                                    // ✅ yaha par bhi support both: images[] ya image
+                                    const images = category.images;
+                                    const currentIndex = currentIndexes[index] ?? 0;
+                                    const currentImage =
+                                        images.length > 0 ? images[currentIndex % images.length] : "";
+
+                                    return (
+                                        <div className="relative rounded-2xl overflow-hidden shadow-lg w-full min-h-[260px]">
+                                            {currentImage && (
+                                                <img
+                                                    src={currentImage}
+                                                    alt={category.title}
+                                                    className="w-full h-full object-cover"
+                                                />
+                                            )}
+
+                                            {/* ◀ Prev */}
+                                            <button
+                                                type="button"
+                                                onClick={() => handlePrevImages(index)}
+                                                className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 text-white px-2 py-2 rounded-full md:text-base"
+                                            >
+                                                <ChevronLeft className="w-5 h-5" />
+                                            </button>
+
+                                            {/* ▶ Next */}
+                                            <button
+                                                type="button"
+                                                onClick={() => handleNextImages(index)}
+                                                className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 text-white px-2 py-2 rounded-full md:text-base"
+                                            >
+                                                <ChevronRight className="w-5 h-5" />
+                                            </button>
+
+                                            {/* dots (optional) */}
+                                            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+                                                {images.map((_: any, imgIndex: number) => (
+                                                    <span
+                                                        key={imgIndex}
+                                                        className={`w-2 h-2 rounded-full ${imgIndex === currentIndex ? "bg-white" : "bg-white/40"
+                                                            }`}
+                                                    />
+                                                ))}
+                                            </div>
+                                        </div>
+                                    );
+                                })()}
+
+                                <div
+                                    className={`absolute -bottom-4 -right-4 w-24 h-24 ${category.color} rounded-xl -z-10`}
                                 />
-                                <div className={`absolute -bottom-4 -right-4 w-24 h-24 ${category.color} rounded-xl -z-10`} />
                             </div>
                         </div>
                     ))}
