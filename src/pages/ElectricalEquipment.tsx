@@ -9,7 +9,7 @@ const productCategories = [
         icon: Plug,
         title: "Switches & Sockets",
         description: "Premium quality electrical switches and sockets for safe, stylish, and reliable power connections.",
-        images: ["https://tse4.mm.bing.net/th/id/OIP.IkWz2TLSYeQcd3_nGdMDXQHaE8?pid=Api&h=220&P=0"],
+        images: ["/electrical-images/switch-socat/1.jpeg", "/electrical-images/switch-socat/2.jpeg", "/electrical-images/switch-socat/3.jpeg", "/electrical-images/switch-socat/4.jpeg"],
         products: [
             "Modular Switches",
             "Electrical Sockets",
@@ -25,7 +25,7 @@ const productCategories = [
         icon: Cable,
         title: "Wires & Cables",
         description: "High quality electrical wires and cables for safe power transmission in residential and commercial installations.",
-        images: ["https://png.pngtree.com/background/20230527/original/pngtree-wires-and-cables-in-various-colors-picture-image_2758680.jpg"],
+        images: ["/electrical-images/wire-cables/4.jpeg", "/electrical-images/wire-cables/2.jpeg", "/electrical-images/wire-cables/3.jpeg", "/electrical-images/wire-cables/1.jpeg"],
         products: [
             "House Wiring Cables",
             "Industrial Power Cables",
@@ -41,7 +41,7 @@ const productCategories = [
         icon: ShieldCheck,
         title: "MCB & DBs",
         description: "High quality MCBs and Distribution Boards for electrical safety, overload protection, and power management.",
-        images: ["https://bchindia.com/wp-content/uploads/2020/03/bch.jpg"],
+        images: ["/electrical-images/mcb/2.jpeg", "/electrical-images/mcb/1.jpeg", "/electrical-images/mcb/3.jpeg", "/electrical-images/mcb/4.jpeg"],
         products: [
             "Single Pole MCB",
             "Double Pole MCB",
@@ -57,7 +57,9 @@ const productCategories = [
         icon: Wrench,
         title: "Electrical Accessories",
         description: "Complete range of electrical accessories for safe installation, maintenance, and finishing of electrical systems.",
-        images: ["https://i.ytimg.com/vi/wDkV53iD5eI/maxresdefault.jpg"],
+        images: ["/electrical-images/electrical-acc/1.jpeg", "/electrical-images/electrical-acc/3.jpeg", "/electrical-images/electrical-acc/1.jpeg",
+            "/electrical-images/electrical-acc/4.jpeg", "/electrical-images/electrical-acc/5.jpeg"
+        ],
         products: [
             "Ceiling Roses",
             "Angle Holders",

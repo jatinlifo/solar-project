@@ -9,7 +9,8 @@ const productCategories = [
         icon: Sun,
         title: "Solar Systems",
         description: "Complete solar energy solutions for residential and commercial applications.",
-        images: ["https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80"],
+        images: ["/solar-images/solar-system/1.jpeg", "/solar-images/solar-system/2.jpeg", "/solar-images/solar-system/3.jpeg"
+            ,"/solar-images/solar-system/4.jpeg", "/solar-images/solar-system/5.jpeg"],
         products: [
             "Monocrystalline Solar Panels",
             "Polycrystalline Solar Panels",
@@ -22,16 +23,14 @@ const productCategories = [
     },
     {
         icon: Zap,
-        title: "Inverter Air Conditioners",
+        title: "Solar System Three Type",
         description: "Energy efficient inverter AC solutions for homes, offices, and commercial spaces.",
-        images: ["https://image.made-in-china.com/2f0j00RloGcdOySMkq/30kw-AC-Inverter-3-Phase-30kw-Three-Phase-Pure-Sine-Wave-Solar-Inverter.jpg"],
+        images: ["/solar-images/ss-three-type/1.jpeg", "/solar-images/ss-three-type/2.jpeg", "/solar-images/ss-three-type/3.jpeg"],
         products: [
-            "1 Ton Inverter AC",
-            "1.5 Ton Inverter AC",
-            "2 Ton Inverter AC",
-            "Split Inverter AC",
-            "Smart WiFi Inverter AC",
-            "Energy Efficient Inverter AC",
+            "Off-grid Solar",
+            "On-grid Solar",
+            "Hybrid Solar",
+            "etc.",
         ],
         color: "bg-accent",
     },
@@ -39,14 +38,12 @@ const productCategories = [
         icon: Battery,
         title: "Batteries",
         description: "Reliable and long-lasting battery solutions for solar systems, inverters, and backup power.",
-        images: ["https://www.kindpng.com/picc/m/137-1372233_battery-png-image-transparent-background-exide-battery-images.png"],
+        images: ["/solar-images/batteries/1.jpeg", "/solar-images/batteries/2.jpeg", "/solar-images/batteries/3.jpeg", "/solar-images/batteries/4.jpeg"],
         products: [
-            "Solar Batteries",
             "Inverter Batteries",
             "Lithium-ion Batteries",
             "Tubular Batteries",
             "SMF Batteries",
-            "High Backup Batteries",
         ],
         color: "bg-accent",
     },
@@ -55,27 +52,27 @@ const productCategories = [
 const SolarSystem = () => {
 
     const [currentIndexes, setCurrentIndexes] = useState<number[]>(
-      productCategories.map(() => 0)
+        productCategories.map(() => 0)
     );
-    
+
     // return next images index
     const handleNextImages = (categoryIndex: number) => {
-      setCurrentIndexes((prev) => {
-        const updated = [...prev];
-        const totalImages = productCategories[categoryIndex].images.length;
-        updated[categoryIndex] = (updated[categoryIndex] + 1) % totalImages;
-        return updated;
-      });
+        setCurrentIndexes((prev) => {
+            const updated = [...prev];
+            const totalImages = productCategories[categoryIndex].images.length;
+            updated[categoryIndex] = (updated[categoryIndex] + 1) % totalImages;
+            return updated;
+        });
     };
     // return prev images index
     const handlePrevImages = (categoryIndex: number) => {
-      setCurrentIndexes((prev) => {
-        const updated = [...prev];
-        const totalImages = productCategories[categoryIndex].images.length;
-        updated[categoryIndex] =
-          (updated[categoryIndex] - 1 + totalImages) % totalImages;
-        return updated;
-      });
+        setCurrentIndexes((prev) => {
+            const updated = [...prev];
+            const totalImages = productCategories[categoryIndex].images.length;
+            updated[categoryIndex] =
+                (updated[categoryIndex] - 1 + totalImages) % totalImages;
+            return updated;
+        });
     };
 
     return (

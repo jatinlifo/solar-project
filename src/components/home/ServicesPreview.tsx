@@ -13,6 +13,15 @@ import {
 
 const products = [
   {
+    route: 'amc-service', 
+    title: "Annual Maintenance Contract",
+    image: "/items/3.jpeg",
+    features: ["Preventive Service",
+      "Breakdown Response",
+      "Health Reports",
+      "24/7 Technical Support",]
+  },
+  {
     route: 'electrical-service',
     title: "Electrical Service & Maintenance ",
     image: "/items/1.jpeg",
@@ -26,15 +35,6 @@ const products = [
       "Commercial plumbing",
       "Emergency services",
       "Pipe repairs, etc",],
-  },
-  {
-    route: 'amc-service', 
-    title: "Annual Maintenance Contract",
-    image: "/items/3.jpeg",
-    features: ["Preventive Service",
-      "Breakdown Response",
-      "Health Reports",
-      "24/7 Technical Support",]
   },
 
 ];
@@ -61,11 +61,12 @@ const ServicesPreview = () => {
         </div>
 
         {/* Products Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {products.map((product, index) => (
             <div
               key={product.title}
-              className="group relative bg-card rounded-2xl overflow-hidden shadow-soft hover:shadow-lg transition-all duration-300 border border-border"
+              className={`group relative bg-card rounded-2xl overflow-hidden shadow-soft hover:shadow-lg transition-all duration-300 border border-border
+              ${index === 0 ? "md:col-span-2 md:w-3/4 md:mx-auto" : ""}`}
             >
               <div className="aspect-video overflow-hidden">
                 <img

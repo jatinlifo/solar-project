@@ -1,6 +1,8 @@
 "use client";
 
 import React from "react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export default function Article() {
   return (
@@ -75,17 +77,23 @@ export default function Article() {
 
         {/* Author / Footer Note */}
         <div className="mt-16 pt-8 border-t border-gray-800 text-center">
-          <p className="text-sm text-gray-400">
-            Article Published by
-          </p>
-          <p className="text-lg font-semibold text-[#CEA42A] mt-1">
-            SHREEJEE ENTERPRISES
-          </p>
-          <p className="text-xs text-gray-500 mt-1">
-            Electrical • Solar • Power Solutions
-          </p>
+          <div className="md:flex md:justify-between">
+            <Button variant="accent" asChild className="mb-10 md:mb-0">
+              <Link to="/">Back</Link>
+            </Button>
+            <div className="">
+              <p className="text-sm text-gray-400">
+                Article Published by
+              </p>
+              <p className="text-lg font-semibold text-[#CEA42A] mt-1">
+                SHREEJEE ENTERPRISES
+              </p>
+              <p className="text-xs text-gray-500 mt-1">
+                Electrical • Solar • Power Solutions
+              </p>
+            </div>
+          </div>
         </div>
-
       </div>
     </div>
   );

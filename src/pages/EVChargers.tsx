@@ -10,17 +10,14 @@ const productCategories = [
         title: "AC EV Chargers",
         description: "Safe and efficient AC charging solutions for homes and small commercial spaces.",
         images: [
-            "https://tse3.mm.bing.net/th/id/OIP.IXmlR5PGZbfb52wlIIy_sQHaHa?pid=Api&h=220&P=0",
-            "https://tse3.mm.bing.net/th/id/OIP.IXmlR5PGZbfb52wlIIy_sQHaHa?pid=Api&h=220&P=0",
-            "https://chargedevs.com/wp-content/uploads/2023/02/EV-Fast-Charger-DC-Fast-Charging-Stations-Stock_533574747-1024x758.jpeg",
-            "https://tse3.mm.bing.net/th/id/OIP.IXmlR5PGZbfb52wlIIy_sQHaHa?pid=Api&h=220&P=0",
-            "https://tse3.mm.bing.net/th/id/OIP.IXmlR5PGZbfb52wlIIy_sQHaHa?pid=Api&h=220&P=0",
+            "/ev-images/ac-ev/1.jpeg",
+            "/ev-images/ac-ev/2.jpeg",
         ],
         products: [
-            "Single Phase AC Chargers",
-            "Three Phase AC Chargers",
-            "Wall Mounted AC Chargers",
-            "Portable AC Chargers",
+            "3.3KW Portable Chargers",
+            "7.2KW Wall Mounted Chargers",
+            "10KW Three Phase Chargers",
+            "22KW Single Phase Chargers",
         ],
         color: "bg-accent",
         route: "ac-ev-chargers"
@@ -29,7 +26,7 @@ const productCategories = [
         icon: BatteryCharging,
         title: "DC Fast Chargers",
         description: "High power DC fast chargers for ultra-fast charging at highways and public stations.",
-        images: ["/ev-images/30.jpeg", "/ev-images/60.jpeg", "/ev-images/120.jpeg", "/ev-images/pdc.jpeg"],
+        images: ["/ev-images/dc-ev/30.jpeg", "/ev-images/dc-ev/60.jpeg", "/ev-images/dc-ev/120.jpeg", "/ev-images/dc-ev/pdc.jpeg"],
         products: [
             "30kW DC Chargers",
             "60kW DC Chargers",
@@ -43,12 +40,12 @@ const productCategories = [
         icon: Home,
         title: "E-Rickshaw Chargers",
         description: "Compact and reliable EV chargers specially designed for daily home charging needs.",
-        images: ["https://tse2.mm.bing.net/th/id/OIP.ys7QMg6kPCoz_5ktvtA-EwHaFj?pid=Api&h=220&P=0"],
+        images: ["/ev-images/e-rikshaw/1.jpeg", "/ev-images/e-rikshaw/2.jpeg", "/ev-images/e-rikshaw/3.jpeg"],
         products: [
-            "Wall Mounted Home Chargers",
-            "Portable Home EV Chargers",
-            "Smart Home EV Chargers",
-            "Single Phase Chargers",
+            "48V 25A Chargers",
+            "48V 18A Chargers",
+            "51.2V 20A Chargers",
+            "etc.",
         ],
         color: "bg-accent",
         route: "home-ev-chargers"
@@ -57,30 +54,30 @@ const productCategories = [
         icon: Building2,
         title: "Two Wheeler Chargers",
         description: "Heavy-duty EV charging solutions for offices, malls, hotels, and parking areas.",
-        images: ["https://tse2.mm.bing.net/th/id/OIP.kB2i0bmad_wM9UOlYmcFJQHaEs?pid=Api&h=220&P=0"],
+        images: ["/ev-images/two-wheeler/1.jpeg", "/ev-images/two-wheeler/2.jpeg", "/ev-images/two-wheeler/3.jpeg", "/ev-images/two-wheeler/4.jpeg"],
         products: [
-            "Public EV Charging Units",
-            "Floor Mounted Chargers",
-            "Multiple Gun Chargers",
-            "Fast Commercial Chargers",
+            "12V 1A Chargers",
+            "12V 3A Chargers",
+            "12V 10A Chargers",
+            "etc.",
         ],
         color: "bg-accent",
         route: "commercial-ev-chargers"
     },
-    {
-        icon: Smartphone,
-        title: "Smart EV Chargers",
-        description: "Advanced smart EV chargers with WiFi, app monitoring, load management and solar support.",
-        images: ["https://tse1.mm.bing.net/th/id/OIP.rf_EqKxy-OnKihkcqac_2gHaHM?pid=Api&h=220&P=0"],
-        products: [
-            "WiFi Enabled EV Chargers",
-            "App Controlled EV Chargers",
-            "Load Balancing Chargers",
-            "Solar Compatible EV Chargers",
-        ],
-        color: "bg-accent",
-        route: "smart-ev-chargers"
-    }
+    // {
+    //     icon: Smartphone,
+    //     title: "Smart EV Chargers",
+    //     description: "Advanced smart EV chargers with WiFi, app monitoring, load management and solar support.",
+    //     images: ["https://tse1.mm.bing.net/th/id/OIP.rf_EqKxy-OnKihkcqac_2gHaHM?pid=Api&h=220&P=0"],
+    //     products: [
+    //         "WiFi Enabled EV Chargers",
+    //         "App Controlled EV Chargers",
+    //         "Load Balancing Chargers",
+    //         "Solar Compatible EV Chargers",
+    //     ],
+    //     color: "bg-accent",
+    //     route: "smart-ev-chargers"
+    // }
 
 ];
 
