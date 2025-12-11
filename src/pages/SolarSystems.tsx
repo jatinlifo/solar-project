@@ -23,7 +23,7 @@ const productCategories = [
     },
     {
         icon: Zap,
-        title: "Solar System Three Type",
+        title: "Solar System Solution",
         description: "Energy efficient inverter AC solutions for homes, offices, and commercial spaces.",
         images: ["/solar-images/ss-three-type/1.jpeg", "/solar-images/ss-three-type/2.jpeg", "/solar-images/ss-three-type/3.jpeg"],
         products: [

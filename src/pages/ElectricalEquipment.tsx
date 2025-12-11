@@ -164,12 +164,12 @@ const ElectricalEquipment = () => {
                                         images.length > 0 ? images[currentIndex % images.length] : "";
 
                                     return (
-                                        <div className="relative rounded-2xl overflow-visible shadow-lg w-full h-[220px] md:h-[360px]">
+                                        <div className="relative rounded-2xl overflow-hidden shadow-lg w-full aspect-[16/9] bg-white">
                                             {currentImage && (
                                                 <img
                                                     src={currentImage}
                                                     alt={category.title}
-                                                    className="w-full h-full object-contain"
+                                                    className="w-full h-full object-contain object-center"
                                                 />
                                             )}
 
