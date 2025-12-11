@@ -176,12 +176,12 @@ const ElectricalService = () => {
                     images.length > 0 ? images[currentIndex % images.length] : "";
 
                   return (
-                  <div className="relative rounded-2xl overflow-hidden shadow-lg w-full h-[220px] md:h-[360px]">
-  <img
-    src={currentImage}
-    alt={category.title}
-    className="w-full h-full object-cover"
-  />
+                    <div className="relative rounded-2xl overflow-hidden shadow-lg w-full h-[220px] md:h-[360px]">
+                      <img
+                        src={currentImage}
+                        alt={category.title}
+                        className="w-full h-full object-cover"
+                      />
                       {/* ◀ Prev */}
                       <button
                         type="button"
