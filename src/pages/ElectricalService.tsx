@@ -9,7 +9,8 @@ const productCategories = [
     icon: Plug,
     title: "Solar Maintenance",
     description: "Reliable solar maintenance services ensuring optimal system performance through routine cleaning, electrical inspections, inverter health checks, performance monitoring, and timely troubleshooting.",
-    images: ["/amc-service-images"],
+    images: ["/electrical-service-images/solar-maintenance/1.jpeg", "/electrical-service-images/solar-maintenance/2.jpeg", "/electrical-service-images/solar-maintenance/3.jpeg",
+      "/electrical-service-images/solar-maintenance/4.jpeg",],
     products: [
       "Solar Panel Cleaning",
       "Electrical & Wiring Inspection",
@@ -23,7 +24,7 @@ const productCategories = [
     icon: Cable,
     title: "EV-Charger Installation Service",
     description: "Professional installation of AC, DC, and fast EV chargers with complete site assessment, load evaluation, safety compliance, wiring setup, and seamless commissioning for homes, businesses, and commercial facilities.",
-    images: ["/electrical-images/wire-cables/4.jpeg", "/electrical-images/wire-cables/2.jpeg", "/electrical-images/wire-cables/3.jpeg", "/electrical-images/wire-cables/1.jpeg"],
+    images: ["/electrical-service-images/ev-charger/1.jpeg", "/electrical-service-images/ev-charger/2.jpeg", "/electrical-service-images/ev-charger/3.jpeg"],
     products: [
       "Home EV Charger Installation",
       "Commercial & Public Charger Installation",
@@ -38,7 +39,7 @@ const productCategories = [
     icon: Cable,
     title: "LED Lighting Service",
     description: "Energy-efficient LED lighting solutions including design, installation, upgrades, and maintenance to improve illumination quality, reduce power consumption, and enhance safety for residential, commercial, and industrial spaces.",
-    images: ["/electrical-images/wire-cables/4.jpeg", "/electrical-images/wire-cables/2.jpeg", "/electrical-images/wire-cables/3.jpeg", "/electrical-images/wire-cables/1.jpeg"],
+    images: ["https://tektronled.com/wp-content/uploads/2024/05/TLC-Services-1253x800.png", "https://www.paclights.com/wp-content/uploads/2025/10/image-5932.jpg"],
     products: [
       "LED Installation & Upgrades",
       "Energy-Efficient Lighting Design",
@@ -53,7 +54,8 @@ const productCategories = [
     icon: Cable,
     title: "Electric Service",
     description: "Comprehensive electrical services including wiring, repairs, safety inspections, load management, and system upgrades for residential, commercial, and industrial properties—ensuring reliability, safety, and efficient power distribution.",
-    images: ["/electrical-images/wire-cables/4.jpeg", "/electrical-images/wire-cables/2.jpeg", "/electrical-images/wire-cables/3.jpeg", "/electrical-images/wire-cables/1.jpeg"],
+    images: ["https://static.vecteezy.com/system/resources/previews/030/470/720/non_2x/electrician-working-in-fuse-box-closeup-electrical-panel-ai-generated-photo.jpg",
+      "https://mega.com.sg/wp-content/uploads/2020/12/electrical-wiring-scaled.jpg", "https://img.freepik.com/premium-photo/electricity-electrical-maintenance-service-engineer-hand-holding-ac-voltmeter-checking-electric-current-voltage-circuit-breaker-terminal-cable-wiring-main-power-distribution-board_101448-4286.jpg?w=2000"],
     products: [
       "Electrical Wiring & Repairs",
       "Electrical Safety Inspection",
@@ -68,7 +70,9 @@ const productCategories = [
     icon: Cable,
     title: "Batteries Repair & Replacement",
     description: "Expert battery repair and replacement services for solar systems, inverters, and backup power units—ensuring reliable performance, extended battery life, and uninterrupted power supply through testing, fault diagnosis, and high-quality replacements.",
-    images: ["/electrical-images/wire-cables/4.jpeg", "/electrical-images/wire-cables/2.jpeg", "/electrical-images/wire-cables/3.jpeg", "/electrical-images/wire-cables/1.jpeg"],
+    images: ["https://d1pibc8vam0bsb.cloudfront.net/wp-content/uploads/2022/01/04145902/Car-Battery-Repair.jpg",
+      "https://www.powermag.com/wp-content/uploads/2021/12/istock-1363808186-1024x576.jpg", "https://i.ytimg.com/vi/f3pQm3PjB6k/maxresdefault.jpg"
+    ],
     products: [
       "Battery Health Testing & Diagnostics",
       "Battery Repair & Reconditioning",
@@ -172,15 +176,12 @@ const ElectricalService = () => {
                     images.length > 0 ? images[currentIndex % images.length] : "";
 
                   return (
-                    <div className="relative rounded-2xl overflow-visible shadow-lg w-full h-[220px] md:h-[360px]">
-                      {currentImage && (
-                        <img
-                          src={currentImage}
-                          alt={category.title}
-                          className="w-full h-full object-contain"
-                        />
-                      )}
-
+                  <div className="relative rounded-2xl overflow-hidden shadow-lg w-full h-[220px] md:h-[360px]">
+  <img
+    src={currentImage}
+    alt={category.title}
+    className="w-full h-full object-cover"
+  />
                       {/* ◀ Prev */}
                       <button
                         type="button"

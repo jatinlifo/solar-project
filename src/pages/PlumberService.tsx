@@ -7,13 +7,13 @@ import { useState } from "react";
 const productCategories = [
   {
     icon: Plug,
-    title: "New Installation Comerical & Indrsuterir",
-    description: "Reliable solar maintenance services ensuring optimal system performance through routine cleaning, electrical inspections, inverter health checks, performance monitoring, and timely troubleshooting.",
-    images: ["/amc-service-images"],
+    title: "New Installation - Commercial & Industria",
+    description: "Professional electrical and energy system installations for commercial and industrial facilities, including complete setup, safety compliance, load management, and high-performance infrastructure to ensure reliable and efficient operations.",
+    images: ["https://www.leecontracting.com/wp-content/uploads/2020/03/electrical-install-1-e1584540533995.jpg?utm_source=chatgpt.com", "https://tristateec.com/wp-content/uploads/2021/04/2021-03-working-on-high-voltage-industrial-electrical-project-chattnooga.jpg?utm_source=chatgpt.com"],
     products: [
-      "Solar Panel Cleaning",
-      "Electrical & Wiring Inspection",
-      "Inverter Health Monitoring",
+      "Commercial Electrical Installation",
+      "Industrial Power & Machinery Setup",
+      "Load Management & Safety Compliance Installation",
       "Emergency Service"
     ],
     color: "bg-accent",
@@ -22,19 +22,21 @@ const productCategories = [
   {
     icon: Cable,
     title: "Plumbing Service",
-    description: "Professional installation of AC, DC, and fast EV chargers with complete site assessment, load evaluation, safety compliance, wiring setup, and seamless commissioning for homes, businesses, and commercial facilities.",
-    images: ["/electrical-images/wire-cables/4.jpeg", "/electrical-images/wire-cables/2.jpeg", "/electrical-images/wire-cables/3.jpeg", "/electrical-images/wire-cables/1.jpeg"],
+    description: "Reliable plumbing solutions including installation, repair, leakage fixing, pipeline maintenance, and drainage system support for residential, commercial, and industrial properties.",
+    images: ["https://www.nuflowmidwest.com/wp-content/uploads/2023/09/The-8-Advantages-of-Hiring-a-Professional-Plumbing-Service-for-Your-Property-Management-Needs-1.png?utm_source=chatgpt.com", "https://supremepipe.com/wp-content/uploads/2023/02/hes-a-pro-at-plumbing-shot-of-a-plumber-fixing-a-2022-10-10-23-51-30-utc-1.jpg?utm_source=chatgpt.com",
+      "https://pugetsoundplumbing.com/wp-content/uploads/2023/12/new-home-plumbing-installation.jpg?utm_source=chatgpt.com",
+    ],
     products: [
-      "Home EV Charger Installation",
-      "Commercial & Public Charger Installation",
-      "AC/DC Fast Charger Setup",
+      "Leakage Detection & Repair",
+      "Pipeline Installation & Maintenance",
+      "Drainage & Bathroom Fittings Service",
       "Emergency Service"
 
     ],
     color: "bg-accent",
     route: "wires-and-cables"
   },
-   
+
 ];
 
 const PlumberService = () => {
@@ -128,14 +130,13 @@ const PlumberService = () => {
                     images.length > 0 ? images[currentIndex % images.length] : "";
 
                   return (
-                    <div className="relative rounded-2xl overflow-visible shadow-lg w-full h-[220px] md:h-[360px]">
-                      {currentImage && (
-                        <img
-                          src={currentImage}
-                          alt={category.title}
-                          className="w-full h-full object-contain"
-                        />
-                      )}
+<div className="relative rounded-2xl overflow-hidden shadow-lg w-full h-[220px] md:h-[360px]">
+  <img
+    src={currentImage}
+    alt={category.title}
+    className="w-full h-full object-cover"
+  />
+
 
                       {/* ◀ Prev */}
                       <button

@@ -77,29 +77,29 @@ const productCategories = [
 
 const LEDLighting = () => {
 
-       const [currentIndexes, setCurrentIndexes] = useState<number[]>(
-         productCategories.map(() => 0)
-       );
-       
-       // return next images index
-       const handleNextImages = (categoryIndex: number) => {
-         setCurrentIndexes((prev) => {
-           const updated = [...prev];
-           const totalImages = productCategories[categoryIndex].images.length;
-           updated[categoryIndex] = (updated[categoryIndex] + 1) % totalImages;
-           return updated;
-         });
-       };
-       // return prev images index
-       const handlePrevImages = (categoryIndex: number) => {
-         setCurrentIndexes((prev) => {
-           const updated = [...prev];
-           const totalImages = productCategories[categoryIndex].images.length;
-           updated[categoryIndex] =
-             (updated[categoryIndex] - 1 + totalImages) % totalImages;
-           return updated;
-         });
-       };
+    const [currentIndexes, setCurrentIndexes] = useState<number[]>(
+        productCategories.map(() => 0)
+    );
+
+    // return next images index
+    const handleNextImages = (categoryIndex: number) => {
+        setCurrentIndexes((prev) => {
+            const updated = [...prev];
+            const totalImages = productCategories[categoryIndex].images.length;
+            updated[categoryIndex] = (updated[categoryIndex] + 1) % totalImages;
+            return updated;
+        });
+    };
+    // return prev images index
+    const handlePrevImages = (categoryIndex: number) => {
+        setCurrentIndexes((prev) => {
+            const updated = [...prev];
+            const totalImages = productCategories[categoryIndex].images.length;
+            updated[categoryIndex] =
+                (updated[categoryIndex] - 1 + totalImages) % totalImages;
+            return updated;
+        });
+    };
 
     return (
         <Layout>
@@ -167,15 +167,14 @@ const LEDLighting = () => {
                                         images.length > 0 ? images[currentIndex % images.length] : "";
 
                                     return (
-                                         <div className="relative rounded-2xl overflow-hidden shadow-lg w-full aspect-[16/9] bg-white">
+                                        <div className="relative rounded-2xl overflow-hidden shadow-lg w-full h-[150px] sm:h-[180px] md:h-[260px] flex items-center justify-center bg-white">
                                             {currentImage && (
                                                 <img
                                                     src={currentImage}
                                                     alt={category.title}
-                                                    className="w-full h-full object-contain object-center"
+                                                    className="h-full w-auto object-contain object-center"
                                                 />
                                             )}
-
                                             {/* ◀ Prev */}
                                             <button
                                                 type="button"
@@ -191,7 +190,7 @@ const LEDLighting = () => {
                                                 onClick={() => handleNextImages(index)}
                                                 className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 text-white px-2 py-2 rounded-full md:text-base"
                                             >
-                                            <ChevronRight className="w-5 h-5" />
+                                                <ChevronRight className="w-5 h-5" />
                                             </button>
 
                                             {/* dots (optional) */}

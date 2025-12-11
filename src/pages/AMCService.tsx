@@ -9,7 +9,8 @@ const productCategories = [
     icon: Plug,
     title: "Solar AMC Service",
     description: "Complete Solar Energy Solutions from Consultants with Regular Maintenance",
-    images: ["/amc-service-images"],
+    images: ["/amc-service-images/solar-amc-service/n.png", "/amc-service-images/solar-amc-service/3.jpeg", "/amc-service-images/solar-amc-service/4.jpeg", "/amc-service-images/solar-amc-service/5.jpeg",
+      "/amc-service-images/solar-amc-service/2.jpeg"],
     products: [
       "Routine Panel Cleaning",
       "Electrical Checks",
@@ -25,7 +26,7 @@ const productCategories = [
     icon: Cable,
     title: "EV- Chargers AMC Service",
     description: "Reliable Annual Maintenance Contract (AMC) service for EV chargers, ensuring smooth performance, timely inspections, and preventive care to avoid unexpected breakdowns.",
-    images: ["/electrical-images/wire-cables/4.jpeg", "/electrical-images/wire-cables/2.jpeg", "/electrical-images/wire-cables/3.jpeg", "/electrical-images/wire-cables/1.jpeg"],
+    images: ["/amc-service-images/ev-amc-service/2.jpeg", "/amc-service-images/ev-amc-service/1.jpeg",],
     products: [
       "Software Updates",
       "Temperature Sensors",
@@ -128,14 +129,12 @@ const AMCService = () => {
                     images.length > 0 ? images[currentIndex % images.length] : "";
 
                   return (
-                    <div className="relative rounded-2xl overflow-visible shadow-lg w-full h-[220px] md:h-[360px]">
-                      {currentImage && (
-                        <img
-                          src={currentImage}
-                          alt={category.title}
-                          className="w-full h-full object-contain"
-                        />
-                      )}
+                    <div className="relative rounded-2xl overflow-hidden shadow-lg w-full h-[220px] md:h-[360px]">
+                      <img
+                        src={currentImage}
+                        alt={category.title}
+                        className="w-full h-full object-cover"
+                      />
 
                       {/* ◀ Prev */}
                       <button
