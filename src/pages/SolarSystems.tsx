@@ -10,7 +10,7 @@ const productCategories = [
         title: "Solar Systems",
         description: "Complete solar energy solutions for residential and commercial applications.",
         images: ["/solar-images/solar-system/1.jpeg", "/solar-images/solar-system/2.jpeg", "/solar-images/solar-system/3.jpeg"
-            ,"/solar-images/solar-system/4.jpeg", "/solar-images/solar-system/5.jpeg"],
+            , "/solar-images/solar-system/4.jpeg", "/solar-images/solar-system/5.jpeg"],
         products: [
             "Monocrystalline Solar Panels",
             "Polycrystalline Solar Panels",
@@ -141,12 +141,12 @@ const SolarSystem = () => {
                                         images.length > 0 ? images[currentIndex % images.length] : "";
 
                                     return (
-                                        <div className="relative rounded-2xl overflow-hidden shadow-lg w-full h-[220px] md:h-[360px]">
+                                        <div className="relative rounded-2xl overflow-hidden shadow-lg w-full aspect-[16/9] bg-white">
                                             {currentImage && (
                                                 <img
                                                     src={currentImage}
                                                     alt={category.title}
-                                                    className="w-full h-full object-cover"
+                                                    className="w-full h-full object-contain object-center"
                                                 />
                                             )}
 
