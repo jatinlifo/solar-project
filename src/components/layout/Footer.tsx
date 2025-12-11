@@ -90,7 +90,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                <p className="text-primary-foreground/80">lenyyoourtmail@email.com</p>
+                <p className="text-primary-foreground/80">info@shreejienterprises8.in </p>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
