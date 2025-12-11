@@ -106,12 +106,9 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-primary-foreground/10">
-        <div className="container-wide py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="container-wide py-6 flex justify-center items-center">
           <p className="text-primary-foreground/60 text-sm">
-            © 2024 Shreeji Enterprises. All rights reserved.
-          </p>
-          <p className="text-primary-foreground/60 text-sm">
-            Retail & Bulk Deal Supplier
+            © T&C
           </p>
         </div>
       </div>
