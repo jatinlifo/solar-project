@@ -85,7 +85,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-primary-foreground/80">123 7655799</p>
+                  <p className="text-primary-foreground/80">+91 7428713868</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -94,11 +94,11 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                <p className="text-primary-foreground/80">Povisaaz Address Here</p>
+                <p className="text-primary-foreground/80">Kh. No. 96/15, Ground Floor, Holambi Kalan, North Delhi-110082</p>
               </li>
             </ul>
             <div className="mt-6 p-4 bg-primary/20 rounded-lg">
-              <p className="text-sm text-primary-foreground/70">GSTIN: [Placeholder]</p>
+              <p className="text-sm text-primary-foreground/70">GSTIN: [07BZDPJ7004G1ZN]</p>
             </div>
           </div>
         </div>

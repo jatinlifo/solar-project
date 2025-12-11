@@ -183,9 +183,9 @@ const AMCService = () => {
             </div>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button size="lg" asChild>
-                <a href="tel:1237655799">
+                <a href="tel:+91 7428713868">
                   <Phone className="w-5 h-5" />
-                  Call Now: 123 7655799
+                  Call Now: +91 7428713868
                 </a>
               </Button>
             </div>

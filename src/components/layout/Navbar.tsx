@@ -57,9 +57,9 @@ const Navbar = () => {
       <div className="bg-[#0A284E] text-primary-foreground py-2 hidden md:block">
         <div className="container-wide flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
-            <a href="tel:1237655799" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <a href="tel:+91 7428713868" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Phone className="w-4 h-4" />
-              <span>123 7655799</span>
+              <span>+91 7428713868</span>
             </a>
             <a href="mailto:lenyyoourtmail@email.com" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Mail className="w-4 h-4" />

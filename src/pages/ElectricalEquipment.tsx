@@ -164,12 +164,12 @@ const ElectricalEquipment = () => {
                                         images.length > 0 ? images[currentIndex % images.length] : "";
 
                                     return (
-                                        <div className="relative rounded-2xl overflow-hidden shadow-lg w-full min-h-[260px]">
+                                        <div className="relative rounded-2xl overflow-visible shadow-lg w-full h-[220px] md:h-[360px]">
                                             {currentImage && (
                                                 <img
                                                     src={currentImage}
                                                     alt={category.title}
-                                                    className="w-full h-full object-cover"
+                                                    className="w-full h-full object-contain"
                                                 />
                                             )}
 
@@ -235,7 +235,7 @@ const ElectricalEquipment = () => {
                                 </Link>
                             </Button>
                             <Button variant="outline" size="lg" asChild>
-                                <a href="tel:1237655799">Call: 123 7655799</a>
+                                <a href="tel:+91 7428713868">Call: +91 7428713868</a>
                             </Button>
                         </div>
                     </div>

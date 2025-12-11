@@ -68,8 +68,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Phone</h3>
-                    <a href="tel:1237655799" className="text-muted-foreground hover:text-primary">
-                      123 7655799
+                    <a href="+91 7428713868" className="text-muted-foreground hover:text-primary">
+                      +91 7428713868
                     </a>
                   </div>
                 </div>
@@ -92,7 +92,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Address</h3>
-                    <p className="text-muted-foreground">Povisaaz Address Here</p>
+                    <p className="text-muted-foreground">h. No. 96/15, Ground Floor, Holambi Kalan, North Delhi-110082</p>
                   </div>
                 </div>
 
@@ -111,7 +111,7 @@ const Contact = () => {
               {/* GSTIN */}
               <div className="p-4 bg-secondary rounded-xl">
                 <p className="text-sm text-muted-foreground">
-                  <strong className="text-foreground">GSTIN:</strong> [Placeholder]
+                  <strong className="text-foreground">GSTIN:</strong> [07BZDPJ7004G1ZN]
                 </p>
               </div>
 

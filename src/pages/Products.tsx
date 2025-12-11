@@ -158,7 +158,7 @@ const Products = () => {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="tel:1237655799">Call: 123 7655799</a>
+                <a href="tel:+91 7428713868">Call: +91 7428713868</a>
               </Button>
             </div>
           </div>
