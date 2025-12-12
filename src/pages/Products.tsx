@@ -120,19 +120,19 @@ const Products = () => {
                     </div>
                   ))}
                 </div>
-                <div className="flex gap-10">
+                <div className="">
                   <Button asChild>
                     <Link to="/contact">
                       Get Quote
                       <ArrowRight className="w-5 h-5" />
                     </Link>
                   </Button>
-                  <Button variant="accent" asChild>
+                  {/* <Button variant="accent" asChild>
                     <Link to={`/${category.route}`}>
                       View Product
                       <ArrowRight className="w-5 h-5" />
                     </Link>
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
               <div className={`relative ${index % 2 === 1 ? "lg:order-1" : ""}`}>
