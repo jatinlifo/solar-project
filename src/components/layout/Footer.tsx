@@ -46,8 +46,8 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-display font-bold text-lg mb-6 ml-16">Quick Links</h4>
-            <ul className="space-y-3 ml-16">
+            <h4 className="font-display font-bold text-lg mb-6 md:ml-16">Quick Links</h4>
+            <ul className="space-y-3 md:ml-16">
               {["Home", "About Us", "Products", "Services", "Gallery", "Blog", "Contact"].map((item) => (
                 <li key={item}>
                   <Link
