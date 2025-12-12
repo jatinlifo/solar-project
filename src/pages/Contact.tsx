@@ -81,7 +81,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground">Email</h3>
                     <a href="mailto: info@shreejienterprises8.in " className="text-muted-foreground hover:text-primary">
-                      info@shreejienterprises8.in 
+                      info@shreejienterprises8.in
                     </a>
                   </div>
                 </div>
@@ -235,16 +235,28 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="h-96 bg-secondary">
-        <div className="w-full h-full flex items-center justify-center">
-          <div className="text-center">
-            <MapPin className="w-16 h-16 text-[#0A284E] mx-auto mb-4" />
-            <p className="text-muted-foreground">Map integration coming soon</p>
-            <p className="text-sm text-muted-foreground mt-2">Povisaaz Address Here</p>
-          </div>
-        </div>
-      </section>
+      {/* Map Section  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3491.1537463750838!2d77.72904597530153!3d28.953163975491126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c64a5d7313f09%3A0x5498e7a5b94172a2!2sINOX%20PVS%20Mall!5e0!3m2!1sen!2sin!4v1765547848786!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}  
+      <section className="relative h-96 bg-secondary">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3491.1537463750838!2d77.72904597530153!3d28.953163975491126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c64a5d7313f09%3A0x5498e7a5b94172a2!2sINOX%20PVS%20Mall!5e0!3m2!1sen!2sin!4v1765547848786!5m2!1sen!2sin"
+    className="w-full h-full border-0"
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+
+  <div
+    onClick={() =>
+      window.open(
+        // https://www.google.com/maps/place/{PlaceName}/@{Lat},{Lng},{Zoom}
+        "https://www.google.com/maps/place/INOX+PVS+Mall/@28.953164,77.729046,17z",
+        "_blank"
+      )
+    }
+    className="absolute inset-0 cursor-pointer"
+  ></div>
+</section>
+
     </Layout>
   );
 };
