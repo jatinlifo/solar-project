@@ -29,8 +29,8 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-      {/* scool karna pa always top sa start ho  */}
-      <ScrollToTop /> 
+      {/* scool karna pa always top sa start ho   */}
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
