@@ -19,7 +19,7 @@ const productCategories = [
             "7.2KW Portable Chargers",
             "7.2KW Wall Mounted Chargers",
             "10KW Bharat AC Chargers",
-            "22KW Three Phase Chargers",
+            "22KW 3Phase Chargers",
         ],
         color: "bg-accent",
         route: "ac-ev-chargers"

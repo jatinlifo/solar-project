@@ -22,46 +22,45 @@ const productCategories = [
   },
   {
     icon: Cable,
-    title: "EV-Charger Installation Service",
+    title: "EV-Charger Maintenance & Service",
     description: "Professional installation of AC, DC, and fast EV chargers with complete site assessment, load evaluation, safety compliance, wiring setup, and seamless commissioning for homes, businesses, and commercial facilities.",
     images: ["/electrical-service-images/ev-charger/1.jpeg", "/electrical-service-images/ev-charger/2.jpeg", "/electrical-service-images/ev-charger/3.jpeg"],
     products: [
-      "Home EV Charger Installation",
-      "Commercial & Public Charger Installation",
-      "AC/DC Fast Charger Setup",
-      "Emergency Service"
+      "Portable Charger Service",
+      "Commercial Charger Service",
+      "AC/DC Fast Charger Service",
+      "Technical Support"
 
     ],
     color: "bg-accent",
     route: "wires-and-cables"
   },
-  {
-    icon: Cable,
-    title: "LED Lighting Service",
-    description: "Energy-efficient LED lighting solutions including design, installation, upgrades, and maintenance to improve illumination quality, reduce power consumption, and enhance safety for residential, commercial, and industrial spaces.",
-    images: ["https://tektronled.com/wp-content/uploads/2024/05/TLC-Services-1253x800.png", "https://www.paclights.com/wp-content/uploads/2025/10/image-5932.jpg"],
-    products: [
-      "LED Installation & Upgrades",
-      "Energy-Efficient Lighting Design",
-      "LED Maintenance & Repair Service",
-      "Emergency Service"
+  // {
+  //   icon: Cable,
+  //   title: "LED Lighting Service",
+  //   description: "Energy-efficient LED lighting solutions including design, installation, upgrades, and maintenance to improve illumination quality, reduce power consumption, and enhance safety for residential, commercial, and industrial spaces.",
+  //   images: ["https://tektronled.com/wp-content/uploads/2024/05/TLC-Services-1253x800.png", "https://www.paclights.com/wp-content/uploads/2025/10/image-5932.jpg"],
+  //   products: [
+  //     "LED Installation & Upgrades",
+  //     "Energy-Efficient Lighting Design",
+  //     "LED Maintenance & Repair Service",
+  //     "Emergency Service"
 
-    ],
-    color: "bg-accent",
-    route: "wires-and-cables"
-  },
+  //   ],
+  //   color: "bg-accent",
+  //   route: "wires-and-cables"
+  // },
   {
     icon: Cable,
-    title: "Electric Service",
+    title: "Electric Service & Maintenance",
     description: "Comprehensive electrical services including wiring, repairs, safety inspections, load management, and system upgrades for residential, commercial, and industrial properties—ensuring reliability, safety, and efficient power distribution.",
     images: ["https://static.vecteezy.com/system/resources/previews/030/470/720/non_2x/electrician-working-in-fuse-box-closeup-electrical-panel-ai-generated-photo.jpg",
       "https://mega.com.sg/wp-content/uploads/2020/12/electrical-wiring-scaled.jpg", "https://img.freepik.com/premium-photo/electricity-electrical-maintenance-service-engineer-hand-holding-ac-voltmeter-checking-electric-current-voltage-circuit-breaker-terminal-cable-wiring-main-power-distribution-board_101448-4286.jpg?w=2000"],
     products: [
-      "Electrical Wiring & Repairs",
-      "Electrical Safety Inspection",
-      "Load Management & System Upgrades",
+      "New Installation",
+      "Home Electric Service",
+      "Industrial Service",
       "Emergency Service"
-
     ],
     color: "bg-accent",
     route: "wires-and-cables"
@@ -74,11 +73,8 @@ const productCategories = [
       "https://www.powermag.com/wp-content/uploads/2021/12/istock-1363808186-1024x576.jpg", "https://i.ytimg.com/vi/f3pQm3PjB6k/maxresdefault.jpg"
     ],
     products: [
-      "Battery Health Testing & Diagnostics",
-      "Battery Repair & Reconditioning",
-      "Battery Replacement (Solar/Inverter/Backup)",
-      "Emergency Service"
-
+      "Lead-Acid Battery",
+      "Lithium-lon Battery",
     ],
     color: "bg-accent",
     route: "wires-and-cables"
@@ -228,18 +224,18 @@ const ElectricalService = () => {
         <div className="container-wide">
           <div className="bg-card rounded-3xl p-8 md:p-12 shadow-lg border border-border text-center">
             <span className="inline-block px-4 py-1 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
-              Bulk Orders
+               Orders
             </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Looking for Bulk Deals?
+              Looking for Deals?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              We offer competitive pricing for bulk orders. Contact us for special rates on large quantity purchases.
+              We offer competitive pricing for orders. Contact us for special rates on large quantity purchases.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button variant="accent" size="lg" asChild>
                 <Link to="/contact">
-                  Request Bulk Quote
+                  Request Quote
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>

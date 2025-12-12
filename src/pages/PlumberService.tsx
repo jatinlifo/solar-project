@@ -7,14 +7,14 @@ import { useState } from "react";
 const productCategories = [
   {
     icon: Plug,
-    title: "New Installation - Commercial & Industria",
-    description: "Professional electrical and energy system installations for commercial and industrial facilities, including complete setup, safety compliance, load management, and high-performance infrastructure to ensure reliable and efficient operations.",
+    title: "Home & Commercial Plumbing",
+    description: "Professional new plumbing installation with high-quality fittings, leak-free work, and durable performance for homes and businesses.",
     images: ["https://www.leecontracting.com/wp-content/uploads/2020/03/electrical-install-1-e1584540533995.jpg?utm_source=chatgpt.com", "https://tristateec.com/wp-content/uploads/2021/04/2021-03-working-on-high-voltage-industrial-electrical-project-chattnooga.jpg?utm_source=chatgpt.com"],
     products: [
-      "Commercial Electrical Installation",
-      "Industrial Power & Machinery Setup",
-      "Load Management & Safety Compliance Installation",
-      "Emergency Service"
+      "New Installation",
+      "Open Plumbing",
+      "Water Filtration",
+      "Concealed Plumbing"
     ],
     color: "bg-accent",
     route: "switches-and-sockets"
@@ -27,11 +27,10 @@ const productCategories = [
       "https://pugetsoundplumbing.com/wp-content/uploads/2023/12/new-home-plumbing-installation.jpg?utm_source=chatgpt.com",
     ],
     products: [
-      "Leakage Detection & Repair",
-      "Pipeline Installation & Maintenance",
-      "Drainage & Bathroom Fittings Service",
+      "Leakage Repair",
+      "Pipeline Maintenance",
+      "Watertank Cleaning",
       "Emergency Service"
-
     ],
     color: "bg-accent",
     route: "wires-and-cables"
@@ -130,14 +129,12 @@ const PlumberService = () => {
                     images.length > 0 ? images[currentIndex % images.length] : "";
 
                   return (
-<div className="relative rounded-2xl overflow-hidden shadow-lg w-full h-[220px] md:h-[360px]">
-  <img
-    src={currentImage}
-    alt={category.title}
-    className="w-full h-full object-cover"
-  />
-
-
+                    <div className="relative rounded-2xl overflow-hidden shadow-lg w-full h-[220px] md:h-[360px]">
+                      <img
+                        src={currentImage}
+                        alt={category.title}
+                        className="w-full h-full object-cover"
+                      />
                       {/* ◀ Prev */}
                       <button
                         type="button"
@@ -184,18 +181,18 @@ const PlumberService = () => {
         <div className="container-wide">
           <div className="bg-card rounded-3xl p-8 md:p-12 shadow-lg border border-border text-center">
             <span className="inline-block px-4 py-1 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
-              Bulk Orders
+               Orders
             </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Looking for Bulk Deals?
+              Looking for Deals?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              We offer competitive pricing for bulk orders. Contact us for special rates on large quantity purchases.
+              We offer competitive pricing for orders. Contact us for special rates on large quantity purchases.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button variant="accent" size="lg" asChild>
                 <Link to="/contact">
-                  Request Bulk Quote
+                  Request Quote
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>

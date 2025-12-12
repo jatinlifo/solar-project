@@ -12,12 +12,12 @@ const productCategories = [
     images: ["/amc-service-images/solar-amc-service/n.png", "/amc-service-images/solar-amc-service/3.jpeg", "/amc-service-images/solar-amc-service/4.jpeg", "/amc-service-images/solar-amc-service/5.jpeg",
       "/amc-service-images/solar-amc-service/2.jpeg"],
     products: [
-      "Routine Panel Cleaning",
-      "Electrical Checks",
-      "Inverter Health Monitoring",
-      "Performance Diagnostics",
-      "Troubleshooting and Repairs",
-      "etc.",
+      "Panel Cleaning",
+      "Electrical Check",
+      "Inverter Health Check",
+      "Performance Monitoring",
+      "Repair and Replacement",
+      "Techinal Support 24/7",
     ],
     color: "bg-accent",
     route: "switches-and-sockets"
@@ -29,7 +29,7 @@ const productCategories = [
     images: ["/amc-service-images/ev-amc-service/2.jpeg", "/amc-service-images/ev-amc-service/1.jpeg",],
     products: [
       "Software Updates",
-      "Temperature Sensors",
+      "Repair & Replacement",
       "Functional Testing",
       "Emergency Support 24/7",
     ],
@@ -182,18 +182,18 @@ const AMCService = () => {
         <div className="container-wide">
           <div className="bg-card rounded-3xl p-8 md:p-12 shadow-lg border border-border text-center">
             <span className="inline-block px-4 py-1 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
-              Bulk Orders
+               Orders
             </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Looking for Bulk Deals?
+              Looking for Deals?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              We offer competitive pricing for bulk orders. Contact us for special rates on large quantity purchases.
+              We offer competitive pricing for orders. Contact us for special rates on large quantity purchases.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button variant="accent" size="lg" asChild>
                 <Link to="/contact">
-                  Request Bulk Quote
+                  Request Quote
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>

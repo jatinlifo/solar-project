@@ -20,19 +20,19 @@ const productCategories = [
     color: "bg-accent",
   },
   {
-    icon: Lightbulb,
-    title: "LED Lighting",
-    description: "Energy-efficient lighting solutions for every space and requirement.",
-    image: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=800&q=80",
+    icon: Car,
+    title: "EV Chargers",
+    description: "Future-ready electric vehicle charging solutions.",
+    image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80",
     products: [
-      "LED Panel Lights",
-      "LED Bulbs",
-      "LED Tube Lights",
-      "Concealed Lights",
-      "Decorative Lights",
-      "Street Lights",
+      "AC Home Chargers",
+      "DC Fast Chargers",
+      "Commercial Charging Stations",
+      "Portable EV Chargers",
+      "Smart Charging Solutions",
+      "Installation Accessories",
     ],
-    color: "bg-primary",
+    color: "bg-green-600",
   },
   {
     icon: Plug,
@@ -50,19 +50,19 @@ const productCategories = [
     color: "bg-blue-600",
   },
   {
-    icon: Car,
-    title: "EV Chargers",
-    description: "Future-ready electric vehicle charging solutions.",
-    image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80",
+    icon: Lightbulb,
+    title: "LED Lighting",
+    description: "Energy-efficient lighting solutions for every space and requirement.",
+    image: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=800&q=80",
     products: [
-      "AC Home Chargers",
-      "DC Fast Chargers",
-      "Commercial Charging Stations",
-      "Portable EV Chargers",
-      "Smart Charging Solutions",
-      "Installation Accessories",
+      "LED Panel Lights",
+      "LED Bulbs",
+      "LED Tube Lights",
+      "Concealed Lights",
+      "Decorative Lights",
+      "Street Lights",
     ],
-    color: "bg-green-600",
+    color: "bg-primary",
   },
 ];
 
@@ -142,18 +142,18 @@ const Products = () => {
         <div className="container-wide">
           <div className="bg-card rounded-3xl p-8 md:p-12 shadow-lg border border-border text-center">
             <span className="inline-block px-4 py-1 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
-              Bulk Orders
+              Orders
             </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Looking for Bulk Deals?
+              Looking for Deals?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              We offer competitive pricing for bulk orders. Contact us for special rates on large quantity purchases.
+              We offer competitive pricing for orders. Contact us for special rates on large quantity purchases.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button variant="accent" size="lg" asChild>
                 <Link to="/contact">
-                  Request Bulk Quote
+                  Request Quote
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
