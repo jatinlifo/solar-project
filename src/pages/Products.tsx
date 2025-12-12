@@ -5,6 +5,7 @@ import { Sun, Lightbulb, Plug, Car, CheckCircle, ArrowRight } from "lucide-react
 
 const productCategories = [
   {
+    route: "solar-system",
     icon: Sun,
     title: "Solar Systems",
     description: "Complete solar energy solutions for residential and commercial applications.",
@@ -20,6 +21,7 @@ const productCategories = [
     color: "bg-accent",
   },
   {
+    route: "ev-chargers",
     icon: Car,
     title: "EV Chargers",
     description: "Future-ready electric vehicle charging solutions.",
@@ -35,10 +37,11 @@ const productCategories = [
     color: "bg-green-600",
   },
   {
+    route: "electrical-equipment",
     icon: Plug,
     title: "Electrical Equipment",
     description: "Premium quality electrical products from trusted brands.",
-    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80",
+    image: "https://lh6.googleusercontent.com/proxy/2viYAeK1dj5_KpDUCGORONTVIT-HQ_1ERYQPnyZ5LAvIoqAJslOWojHJ8QXmVOJaTe3pK9SyG1FuycU3OoZqgX7xG_M_Iul7O9Njb4KeXpwYrCvIPcFYhh59I_ogZQ",
     products: [
       "Modular Switches",
       "Electrical Wires",
@@ -50,6 +53,7 @@ const productCategories = [
     color: "bg-blue-600",
   },
   {
+    route: 'led-lighting', 
     icon: Lightbulb,
     title: "LED Lighting",
     description: "Energy-efficient lighting solutions for every space and requirement.",
@@ -90,11 +94,10 @@ const Products = () => {
       <section className="section-padding bg-background">
         <div className="container-wide space-y-24">
           {productCategories.map((category, index) => (
-            <div 
+            <div
               key={category.title}
-              className={`grid lg:grid-cols-2 gap-12 items-center ${
-                index % 2 === 1 ? "lg:flex-row-reverse" : ""
-              }`}
+              className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                }`}
             >
               <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                 <div className={`inline-flex items-center gap-2 px-4 py-2 ${category.color}/10 rounded-full mb-4`}>
@@ -117,12 +120,20 @@ const Products = () => {
                     </div>
                   ))}
                 </div>
-                <Button asChild>
-                  <Link to="/contact">
-                    Get Quote
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
-                </Button>
+                <div className="flex gap-10">
+                  <Button asChild>
+                    <Link to="/contact">
+                      Get Quote
+                      <ArrowRight className="w-5 h-5" />
+                    </Link>
+                  </Button>
+                  <Button variant="accent" asChild>
+                    <Link to={`/${category.route}`}>
+                      View Product
+                      <ArrowRight className="w-5 h-5" />
+                    </Link>
+                  </Button>
+                </div>
               </div>
               <div className={`relative ${index % 2 === 1 ? "lg:order-1" : ""}`}>
                 <img

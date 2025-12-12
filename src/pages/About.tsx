@@ -158,7 +158,7 @@ const About = () => {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-accent">
+      <section className="section-padding bg-[#CEA42A]">
         <div className="container-wide text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
             Ready to Work With Us?

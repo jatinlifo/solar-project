@@ -1,12 +1,12 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { 
-  Sun, 
-  Lightbulb, 
-  Plug, 
-  Car, 
-  Wrench, 
+import {
+  Sun,
+  Lightbulb,
+  Plug,
+  Car,
+  Wrench,
   Droplets,
   ArrowRight,
   CheckCircle,
@@ -15,88 +15,34 @@ import {
 
 const services = [
   {
-    icon: Sun,
-    title: "Solar Installation & Maintenance",
-    description: "Complete solar energy solutions from consultation to installation and ongoing maintenance.",
-    features: [
-      "Site assessment & consultation",
-      "Custom system design",
-      "Professional installation",
-      "Regular maintenance",
-      "Performance monitoring",
-      "Warranty support",
-    ],
-    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80",
-  },
-  {
     icon: Plug,
-    title: "Electrical Wiring & Commercial Work",
-    description: "Expert electrical services for residential and commercial properties.",
-    features: [
-      "New wiring installation",
-      "Rewiring services",
-      "Commercial electrical work",
-      "Panel upgrades",
-      "Safety inspections",
-      "Emergency repairs",
-    ],
-    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    icon: Lightbulb,
-    title: "LED Lighting Setup",
-    description: "Energy-efficient lighting solutions designed and installed by experts.",
-    features: [
-      "Lighting design consultation",
-      "LED retrofit services",
-      "Commercial lighting",
-      "Decorative installations",
-      "Smart lighting systems",
-      "Energy audit",
-    ],
-    image: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    icon: Car,
-    title: "EV Charger Installation",
-    description: "Future-proof your home or business with professional EV charging solutions.",
-    features: [
-      "Home charger installation",
-      "Commercial stations",
-      "Load management",
-      "Smart charging setup",
-      "Maintenance services",
-      "Network integration",
-    ],
-    image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80",
+    route: 'amc-service',
+    title: "Annual Maintenance Contract",
+    description: "Regular yearly maintenance with scheduled check-ups and priority support to ensure smooth performance, fewer breakdowns, and longer equipment life.",
+    image: "/items/3.jpeg",
+    features: ["Preventive Service",
+      "Breakdown Response",
+      "Health Reports",
+      "24/7 Technical Support",]
   },
   {
     icon: Wrench,
-    title: "Fault Finding & Repair",
-    description: "Quick diagnosis and repair services for all electrical systems.",
-    features: [
-      "Electrical fault diagnosis",
-      "Emergency repairs",
-      "Circuit troubleshooting",
-      "Equipment repair",
-      "Preventive maintenance",
-      "Safety upgrades",
-    ],
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80",
+    route: 'electrical-service',
+    title: "Electrical Service & Maintenance",
+    description: "Professional inspection, repair, and preventive maintenance with timely support to ensure safe, reliable, and efficient electrical systems.",
+    image: "/items/1.jpeg",
+    features: ["Solar Panels", "Inverters", "Batteries", "EV Charger, etc."],
   },
   {
     icon: Droplets,
-    title: "Plumbing Services",
-    description: "Comprehensive plumbing solutions for homes and businesses.",
-    features: [
-      "New installations",
-      "Pipe repairs",
-      "Fixture replacement",
-      "Drainage solutions",
+    route: 'plumbing-service',
+    title: "Plumbing Service & Maintenance",
+    description: "Comprehensive inspection, timely repairs, and preventive maintenance to ensure smooth water flow, leak-free operation, and long-lasting, reliable plumbing systems.",
+    image: "/items/2.jpeg",
+    features: ["New installations",
       "Commercial plumbing",
       "Emergency services",
-    ],
-    image: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=800&q=80",
+      "Pipe repairs, etc",],
   },
 ];
 
@@ -124,7 +70,7 @@ const Services = () => {
       <section className="section-padding bg-background">
         <div className="container-wide space-y-16">
           {services.map((service, index) => (
-            <div 
+            <div
               key={service.title}
               className="bg-card rounded-3xl overflow-hidden shadow-soft border border-border"
             >
@@ -161,6 +107,12 @@ const Services = () => {
                         <ArrowRight className="w-5 h-5" />
                       </Link>
                     </Button>
+                    <Button variant="accent" asChild>
+                      <Link to={`/${service.route}`}>
+                        View Service
+                        <ArrowRight className="w-5 h-5" />
+                      </Link>
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -170,7 +122,7 @@ const Services = () => {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-accent">
+      <section className="section-padding bg-[#CEA42A]">
         <div className="container-wide">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="text-center lg:text-left">
