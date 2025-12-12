@@ -92,7 +92,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Address</h3>
-                    <p className="text-muted-foreground">h. No. 96/15, Ground Floor, Holambi Kalan, North Delhi-110082</p>
+                    <p className="text-muted-foreground">h. No. 96/15, Ground Floor, Holambi Kalan, North Delhi-110082, India</p>
                   </div>
                 </div>
 

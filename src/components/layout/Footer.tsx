@@ -65,9 +65,9 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-bold text-lg mb-6">Our Products</h4>
             <ul className="space-y-3">
-              {[{title : "Solar Systems", route: "solar-system"}, {title: "LED Lighting", route: "led-lighting"}, {title:"Electrical Equipment", route: "electrical-equipment"},
-               {title: "EV Chargers", route: "ev-chargers"}, {title: "Electrical Service", route: "electrical-service"}, {title: "Plumbing Service", route:"plumbing-service"},
-               {title: "AMC Service", route: "amc-service"}].
+              {[{title : "Solar Systems", route: "solar-system"},  {title: "EV Chargers", route: "ev-chargers"},{title:"Electrical Equipment", route: "electrical-equipment"},
+               {title: "LED Lighting", route: "led-lighting"},{title: "Electrical Service", route: "electrical-service"},
+                 {title: "Plumbing Service", route:"plumbing-service"}, {title: "AMC Service", route: "amc-service"}].
                map((item) => (
                 <li key={item.title}>
                   <Link to={`/${item.route}`} className="text-primary-foreground/80 hover:text-accent transition-colors">
@@ -94,7 +94,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                <p className="text-primary-foreground/80">Kh. No. 96/15, Ground Floor, Holambi Kalan, North Delhi-110082</p>
+                <p className="text-primary-foreground/80">Kh. No. 96/15, Ground Floor, Holambi Kalan, North Delhi-110082, India</p>
               </li>
             </ul>
             {/* <div className="mt-6 p-4 bg-primary/20 rounded-lg">
