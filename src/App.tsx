@@ -19,6 +19,7 @@ import Article from "./pages/Article";
 import ElectricalService from "./pages/ElectricalService";
 import PlumberService from "./pages/PlumberService";
 import AMCService from "./pages/AMCService";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,8 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      {/* scool karna pa always top sa start ho  */}
+      <ScrollToTop /> 
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
