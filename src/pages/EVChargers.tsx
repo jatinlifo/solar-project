@@ -15,9 +15,11 @@ const productCategories = [
         ],
         products: [
             "3.3KW Portable Chargers",
+            "3.3KW Wall Mounted Chargers",
+            "7.2KW Portable Chargers",
             "7.2KW Wall Mounted Chargers",
-            "10KW Three Phase Chargers",
-            "22KW Single Phase Chargers",
+            "10KW Bharat AC Chargers",
+            "22KW Three Phase Chargers",
         ],
         color: "bg-accent",
         route: "ac-ev-chargers"
@@ -45,21 +47,21 @@ const productCategories = [
             "48V 25A Chargers",
             "48V 18A Chargers",
             "51.2V 20A Chargers",
-            "etc.",
+            "72V 15A Chargers, etc.",
         ],
         color: "bg-accent",
         route: "home-ev-chargers"
     },
     {
         icon: Building2,
-        title: "Two Wheeler Chargers",
+        title: "Two & Three Wheeler Chargers",
         description: "Heavy-duty EV charging solutions for offices, malls, hotels, and parking areas.",
         images: ["/ev-images/two-wheeler/1.jpeg", "/ev-images/two-wheeler/2.jpeg", "/ev-images/two-wheeler/3.jpeg", "/ev-images/two-wheeler/4.jpeg"],
         products: [
             "12V 1A Chargers",
             "12V 3A Chargers",
             "12V 10A Chargers",
-            "etc.",
+            "",
         ],
         color: "bg-accent",
         route: "commercial-ev-chargers"
@@ -229,18 +231,18 @@ const EVChargers = () => {
                 <div className="container-wide">
                     <div className="bg-card rounded-3xl p-8 md:p-12 shadow-lg border border-border text-center">
                         <span className="inline-block px-4 py-1 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
-                            Bulk Orders
+                             Orders
                         </span>
                         <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-                            Looking for Bulk Deals?
+                            Looking for Deals?
                         </h2>
                         <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                            We offer competitive pricing for bulk orders. Contact us for special rates on large quantity purchases.
+                            We offer competitive pricing for orders. Contact us for special rates on large quantity purchases.
                         </p>
                         <div className="flex flex-wrap gap-4 justify-center">
                             <Button variant="accent" size="lg" asChild>
                                 <Link to="/contact">
-                                    Request Bulk Quote
+                                    Request Quote
                                     <ArrowRight className="w-5 h-5" />
                                 </Link>
                             </Button>

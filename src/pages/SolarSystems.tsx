@@ -12,38 +12,50 @@ const productCategories = [
         images: ["/solar-images/solar-system/1.jpeg", "/solar-images/solar-system/2.jpeg", "/solar-images/solar-system/3.jpeg"
             , "/solar-images/solar-system/4.jpeg", "/solar-images/solar-system/5.jpeg"],
         products: [
-            "Monocrystalline Solar Panels",
-            "Polycrystalline Solar Panels",
-            "Solar Inverters",
-            "Solar Batteries",
-            "Mounting Structures",
-            "Complete Solar Kits",
+            "Off-grid Solar",
+            "On-grid Solar",
+            "Hybrid Solar",
+            "Hydrogen Solar",
         ],
         color: "bg-accent",
     },
     {
         icon: Zap,
-        title: "Solar System Solution",
-        description: "Energy efficient inverter AC solutions for homes, offices, and commercial spaces.",
+        title: "Solar Panel Solution",
+        description: "Our Solar Panel Solutions provide clean, reliable, and cost-efficient energy with long-lasting performance for a sustainable future.",
         images: ["/solar-images/ss-three-type/1.jpeg", "/solar-images/ss-three-type/2.jpeg", "/solar-images/ss-three-type/3.jpeg"],
         products: [
-            "Off-grid Solar",
-            "On-grid Solar",
-            "Hybrid Solar",
-            "etc.",
+            "Monocrystalline Panel",
+            "Polycrystalline Panel",
+            "Thin-Film Panel",
+            "Bifacial Panel",
         ],
         color: "bg-accent",
     },
     {
         icon: Battery,
-        title: "Batteries",
-        description: "Reliable and long-lasting battery solutions for solar systems, inverters, and backup power.",
+        title: "Solar Inverter & Batteries",
+        description: "High-efficiency solar inverters and long-lasting batteries that ensure stable power backup and smooth energy management for homes and businesses.",
         images: ["/solar-images/batteries/1.jpeg", "/solar-images/batteries/2.jpeg", "/solar-images/batteries/3.jpeg", "/solar-images/batteries/4.jpeg"],
         products: [
-            "Inverter Batteries",
+            "Solar Inverter",
+            "Solar Batteries",
             "Lithium-ion Batteries",
             "Tubular Batteries",
-            "SMF Batteries",
+            // "SMF Batteries",
+        ],
+        color: "bg-accent",
+    },
+     {
+        icon: Battery,
+        title: "Structure and Accessories",
+        description: "Durable structures and quality solar accessories designed to support safe installation, long-term stability, and optimum system performance.",
+        images: ["/solar-images/batteries/1.jpeg", "/solar-images/batteries/2.jpeg", "/solar-images/batteries/3.jpeg", "/solar-images/batteries/4.jpeg"],
+        products: [
+            "Mounting Structure",
+            "Earthing Material",
+            "Junction Box",
+            "Cable & Wire, etc."
         ],
         color: "bg-accent",
     },
@@ -196,18 +208,18 @@ const SolarSystem = () => {
                 <div className="container-wide">
                     <div className="bg-card rounded-3xl p-8 md:p-12 shadow-lg border border-border text-center">
                         <span className="inline-block px-4 py-1 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
-                            Bulk Orders
+                             Orders
                         </span>
                         <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-                            Looking for Bulk Deals?
+                            Looking for Deals?
                         </h2>
                         <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                            We offer competitive pricing for bulk orders. Contact us for special rates on large quantity purchases.
+                            We offer competitive pricing for orders. Contact us for special rates on large quantity purchases.
                         </p>
                         <div className="flex flex-wrap gap-4 justify-center">
                             <Button variant="accent" size="lg" asChild>
                                 <Link to="/contact">
-                                    Request Bulk Quote
+                                    Request Quote
                                     <ArrowRight className="w-5 h-5" />
                                 </Link>
                             </Button>

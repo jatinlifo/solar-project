@@ -43,12 +43,12 @@ const productCategories = [
         description: "High quality MCBs and Distribution Boards for electrical safety, overload protection, and power management.",
         images: ["/electrical-images/mcb/2.jpeg", "/electrical-images/mcb/1.jpeg", "/electrical-images/mcb/3.jpeg", "/electrical-images/mcb/4.jpeg"],
         products: [
-            "Single Pole MCB",
-            "Double Pole MCB",
-            "Triple Pole MCB",
-            "Main Distribution Boards (DBs)",
-            "MCB Switches",
-            "Industrial Distribution Boards",
+            "MCB Switche",
+            "AC & DC Contactor",
+            "SPD Protection",
+            "MCCB's Switche",
+            "AC & DC Meter",
+            "Overload Relay, etc.",
         ],
         color: "bg-accent",
         route: "mcb-and-dbs"

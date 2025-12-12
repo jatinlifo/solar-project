@@ -13,7 +13,7 @@ const products = [
     route: 'ev-chargers',
     title: "EV Chargers",
     image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=600&q=80",
-    features: ["AC Chargers", "DC Fast Chargers", "Home Solutions", "Commercial Stations"],
+    features: ["AC Chargers", "DC Fast Chargers", "Portable Chargers", "Two Wheelar Chargers"],
   },
   {
     route: 'electrical-equipment',

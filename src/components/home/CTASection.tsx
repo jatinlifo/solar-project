@@ -4,7 +4,7 @@ import { Phone, ArrowRight } from "lucide-react";
 
 const CTASection = () => {
   return (
-    <section className="section-padding bg-accent">
+    <section className="section-padding bg-[#CEA42A]">
       <div className="container-wide">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="text-center lg:text-left">

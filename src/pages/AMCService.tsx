@@ -16,7 +16,7 @@ const productCategories = [
       "Electrical Checks",
       "Inverter Health Monitoring",
       "Performance Diagnostics",
-      "Quick Troubleshooting and Repairs",
+      "Troubleshooting and Repairs",
       "etc.",
     ],
     color: "bg-accent",

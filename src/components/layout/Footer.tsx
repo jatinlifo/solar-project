@@ -97,9 +97,9 @@ const Footer = () => {
                 <p className="text-primary-foreground/80">Kh. No. 96/15, Ground Floor, Holambi Kalan, North Delhi-110082</p>
               </li>
             </ul>
-            <div className="mt-6 p-4 bg-primary/20 rounded-lg">
+            {/* <div className="mt-6 p-4 bg-primary/20 rounded-lg">
               <p className="text-sm text-primary-foreground/70">GSTIN: [07BZDPJ7004G1ZN]</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -108,7 +108,7 @@ const Footer = () => {
       <div className="border-t border-primary-foreground/10">
         <div className="container-wide py-6 flex justify-center items-center">
           <p className="text-primary-foreground/60 text-sm">
-            © T&C
+            © T&C Apply
           </p>
         </div>
       </div>
