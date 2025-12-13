@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 const products = [
   {
     route: 'solar-system',
-    title: "Solar Systems",
+    title: "Solar Energy",
     image: "https://static.vecteezy.com/system/resources/previews/001/235/998/non_2x/solar-panel-cell-on-dramatic-sunset-sky-background-free-photo.jpg",
     features: ["Solar Panels", "Inverters", "Batteries", "Complete Installations"],
   },

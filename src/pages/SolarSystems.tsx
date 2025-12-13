@@ -7,10 +7,14 @@ import { useState } from "react";
 const productCategories = [
     {
         icon: Sun,
-        title: "Solar Systems",
+        title: "Solar Energy",
         description: "Complete solar energy solutions for residential and commercial applications.",
-        images: ["/solar-images/solar-system/1.jpeg", "/solar-images/solar-system/2.jpeg", "/solar-images/solar-system/3.jpeg"
-            , "/solar-images/solar-system/4.jpeg", "/solar-images/solar-system/5.jpeg"],
+        // images: ["/solar-images/solar-system/1.jpeg", "/solar-images/solar-system/2.jpeg", "/solar-images/solar-system/3.jpeg"
+        //     , "/solar-images/solar-system/4.jpeg", "/solar-images/solar-system/5.jpeg"],
+        images: ["https://synergycorp.com.pk/wp-content/uploads/2024/03/on-grid-and-off-grid-solar-system.jpg",
+            "https://kcpsolar.com/wp-content/uploads/2023/10/Blog-Hybrid-img1.webp",
+            "https://www.chiangmaisolar.com/wp-content/uploads/2021/02/Hydrogen-storage-systems-Day-and-Night.jpg",
+        ],
         products: [
             "Off-grid Solar",
             "On-grid Solar",
@@ -23,7 +27,12 @@ const productCategories = [
         icon: Zap,
         title: "Solar Panel Solution",
         description: "Our Solar Panel Solutions provide clean, reliable, and cost-efficient energy with long-lasting performance for a sustainable future.",
-        images: ["/solar-images/ss-three-type/1.jpeg", "/solar-images/ss-three-type/2.jpeg", "/solar-images/ss-three-type/3.jpeg"],
+        // images: ["/solar-images/ss-three-type/1.jpeg", "/solar-images/ss-three-type/2.jpeg", "/solar-images/ss-three-type/3.jpeg"],
+        images: ["https://images.jdmagicbox.com/quickquotes/images_main/monocrystalline-solar-power-panel-capacity-645-kw-2222737000-cscs8ivk.jpg",
+            "https://suryaurza.com/wp-content/uploads/2024/06/170W-12V-Polycrystalline-Solar-Panel.webp",
+            "https://5.imimg.com/data5/SELLER/Default/2025/11/558345335/QZ/IG/NM/4574469/thin-film-solar-panel-500x500.jpg",
+            "https://eepower.com/uploads/articles/Bifacial_vertical_solar_panels.jpg",
+        ],
         products: [
             "Monocrystalline Panel",
             "Polycrystalline Panel",
@@ -36,7 +45,12 @@ const productCategories = [
         icon: Battery,
         title: "Solar Inverter & Batteries",
         description: "High-efficiency solar inverters and long-lasting batteries that ensure stable power backup and smooth energy management for homes and businesses.",
-        images: ["/solar-images/batteries/1.jpeg", "/solar-images/batteries/2.jpeg", "/solar-images/batteries/3.jpeg", "/solar-images/batteries/4.jpeg"],
+        // images: ["/solar-images/batteries/1.jpeg", "/solar-images/batteries/2.jpeg", "/solar-images/batteries/3.jpeg", "/solar-images/batteries/4.jpeg"],
+        images: ["https://www.mokoenergy.com/wp-content/uploads/2024/04/Understanding-different-types-of-solar-inverters-1-1280x720.webp",
+            "https://gk-electrics.com/wp-content/uploads/2017/06/photovoltaik-862x647.jpg",
+            "",
+            "",
+        ],
         products: [
             "Solar Inverter",
             "Solar Batteries",
@@ -46,7 +60,7 @@ const productCategories = [
         ],
         color: "bg-accent",
     },
-     {
+    {
         icon: Battery,
         title: "Structure and Accessories",
         description: "Durable structures and quality solar accessories designed to support safe installation, long-term stability, and optimum system performance.",
@@ -154,13 +168,11 @@ const SolarSystem = () => {
 
                                     return (
                                         <div className="relative rounded-2xl overflow-hidden shadow-lg w-full aspect-[16/9] bg-white">
-                                            {currentImage && (
-                                                <img
-                                                    src={currentImage}
-                                                    alt={category.title}
-                                                    className="w-full h-full object-contain object-center"
-                                                />
-                                            )}
+                                            <img
+                                                src={currentImage}
+                                                alt={category.title}
+                                                className="w-full h-full object-contain brightness-110 contrast-110"
+                                            />
 
                                             {/* ◀ Prev */}
                                             <button
@@ -208,7 +220,7 @@ const SolarSystem = () => {
                 <div className="container-wide">
                     <div className="bg-card rounded-3xl p-8 md:p-12 shadow-lg border border-border text-center">
                         <span className="inline-block px-4 py-1 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
-                             Orders
+                            Orders
                         </span>
                         <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Looking for Deals?
