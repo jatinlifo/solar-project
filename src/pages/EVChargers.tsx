@@ -28,7 +28,7 @@ const productCategories = [
         icon: BatteryCharging,
         title: "DC Fast Chargers",
         description: "High power DC fast chargers for ultra-fast charging at highways and public stations.",
-        images: ["/ev-images/dc-ev/30.jpeg", "/ev-images/dc-ev/60.jpeg", "/ev-images/dc-ev/120.jpeg", "/ev-images/dc-ev/pdc.jpeg"],
+        images: ["/ev-images/dc-ev/30.jpeg", "/ev-images/dc-ev/60.webp", "/ev-images/dc-ev/120.avif", "/ev-images/dc-ev/pdc.avif"],
         products: [
             "30kW DC Chargers",
             "60kW DC Chargers",
@@ -42,7 +42,7 @@ const productCategories = [
         icon: Home,
         title: "E-Rickshaw Chargers",
         description: "Compact and reliable EV chargers specially designed for daily home charging needs.",
-        images: ["/ev-images/e-rikshaw/1.jpeg", "/ev-images/e-rikshaw/2.jpeg", "/ev-images/e-rikshaw/3.jpeg"],
+        images: ["/ev-images/e-rikshaw/5.webp","/ev-images/e-rikshaw/1.jpg", "/ev-images/e-rikshaw/2.avif", "/ev-images/e-rikshaw/3.jpeg", "/ev-images/e-rikshaw/4.jpg"],
         products: [
             "48V 25A Chargers",
             "48V 18A Chargers",
@@ -56,12 +56,12 @@ const productCategories = [
         icon: Building2,
         title: "Two & Three Wheeler Chargers",
         description: "Heavy-duty EV charging solutions for offices, malls, hotels, and parking areas.",
-        images: ["/ev-images/two-wheeler/1.jpeg", "/ev-images/two-wheeler/2.jpeg", "/ev-images/two-wheeler/3.jpeg", "/ev-images/two-wheeler/4.jpeg"],
+        images: ["/ev-images/two-wheeler/1.jpg", "/ev-images/two-wheeler/2.avif", "/ev-images/two-wheeler/3.webp", "/ev-images/two-wheeler/4.webp"],
         products: [
-            "12V 1A Chargers",
+            "29V 5A Chargers",
             "12V 3A Chargers",
             "12V 10A Chargers",
-            "",
+            "36V 2A Chargers, etc.",
         ],
         color: "bg-accent",
         route: "commercial-ev-chargers"
@@ -179,7 +179,7 @@ const EVChargers = () => {
                                                 <img
                                                     src={currentImage}
                                                     alt={category.title}
-                                                    className="w-full h-full object-contain object-center"
+                                                    className="w-full h-full object-contain object-center brightness-110 contrast-110"
                                                 />
                                             )}
 
