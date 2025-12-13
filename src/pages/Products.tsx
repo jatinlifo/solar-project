@@ -53,7 +53,7 @@ const productCategories = [
     color: "bg-blue-600",
   },
   {
-    route: 'led-lighting', 
+    route: 'led-lighting',
     icon: Lightbulb,
     title: "LED Lighting",
     description: "Energy-efficient lighting solutions for every space and requirement.",
@@ -99,49 +99,63 @@ const Products = () => {
               className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""
                 }`}
             >
-              <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                <div className={`inline-flex items-center gap-2 px-4 py-2 ${category.color}/10 rounded-full mb-4`}>
+              <div className="order-2 md:order-1">
+                <div className={index % 2 === 1 ? "lg:order-2" : ""}>
+                  <div className="hidden md:block">
+                    <div className={`inline-flex items-center gap-2 px-4 py-2 ${category.color}/10 rounded-full mb-4`}>
+                      <category.icon className={`w-5 h-5 ${category.color === "bg-accent" ? "text-accent" : category.color === "bg-primary" ? "text-primary" : category.color === "bg-blue-600" ? "text-blue-600" : "text-green-600"}`} />
+                      <span className={`text-sm font-semibold ${category.color === "bg-accent" ? "text-accent" : category.color === "bg-primary" ? "text-primary" : category.color === "bg-blue-600" ? "text-blue-600" : "text-green-600"}`}>
+                        {category.title}
+                      </span>
+                    </div>
+                  </div>
+                  <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+                    {category.title}
+                  </h2>
+                  <p className="text-lg text-muted-foreground mb-8">
+                    {category.description}
+                  </p>
+                  <div className="grid grid-cols-2 gap-3 mb-8">
+                    {category.products.map((product) => (
+                      <div key={product} className="flex items-center gap-2">
+                        <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
+                        <span className="text-foreground">{product}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button asChild>
+                      <Link to="/contact">
+                        Get Quote
+                        <ArrowRight className="w-5 h-5" />
+                      </Link>
+                    </Button>
+                    <Button variant="accent" asChild>
+                      <Link to={`/${category.route}`}>
+                        View Product
+                        <ArrowRight className="w-5 h-5" />
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+              <div className="block md:hidden px-4 !-mb-10 md:-mb-0">
+                <div className={`inline-flex items-center gap-2 ${category.color}/10 rounded-full`}>
                   <category.icon className={`w-5 h-5 ${category.color === "bg-accent" ? "text-accent" : category.color === "bg-primary" ? "text-primary" : category.color === "bg-blue-600" ? "text-blue-600" : "text-green-600"}`} />
                   <span className={`text-sm font-semibold ${category.color === "bg-accent" ? "text-accent" : category.color === "bg-primary" ? "text-primary" : category.color === "bg-blue-600" ? "text-blue-600" : "text-green-600"}`}>
                     {category.title}
                   </span>
                 </div>
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-                  {category.title}
-                </h2>
-                <p className="text-lg text-muted-foreground mb-8">
-                  {category.description}
-                </p>
-                <div className="grid grid-cols-2 gap-3 mb-8">
-                  {category.products.map((product) => (
-                    <div key={product} className="flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                      <span className="text-foreground">{product}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Button asChild>
-                    <Link to="/contact">
-                      Get Quote
-                      <ArrowRight className="w-5 h-5" />
-                    </Link>
-                  </Button>
-                  <Button variant="accent" asChild>
-                    <Link to={`/${category.route}`}>
-                      View Product
-                      <ArrowRight className="w-5 h-5" />
-                    </Link>
-                  </Button>
-                </div>
               </div>
-              <div className={`relative ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                <img
-                  src={category.image}
-                  alt={category.title}
-                  className="rounded-2xl shadow-lg w-full"
-                />
-                <div className={`absolute -bottom-4 -right-4 w-24 h-24 ${category.color} rounded-xl -z-10`} />
+              <div className="order-1 md:order-2">
+                <div className={`relative ${index % 2 === 1 ? "lg:order-1" : ""}`}>
+                  <img
+                    src={category.image}
+                    alt={category.title}
+                    className="rounded-2xl shadow-lg w-full"
+                  />
+                  <div className={`absolute -bottom-4 -right-4 w-24 h-24 ${category.color} rounded-xl -z-10`} />
+                </div>
               </div>
             </div>
           ))}
