@@ -174,14 +174,12 @@ const EVChargers = () => {
                                         images.length > 0 ? images[currentIndex % images.length] : "";
 
                                     return (
-                                       <div className="relative rounded-2xl overflow-hidden shadow-lg w-full aspect-[16/9] bg-white">
-                                            {currentImage && (
-                                                <img
-                                                    src={currentImage}
-                                                    alt={category.title}
-                                                    className="w-full h-full object-contain object-center brightness-110 contrast-110"
-                                                />
-                                            )}
+                                      <div className="relative rounded-2xl overflow-hidden shadow-lg w-full aspect-[16/9] bg-white">
+                                            <img
+                                                src={currentImage}
+                                                alt={category.title}
+                                                className="w-full h-full object-contain brightness-110 contrast-110"
+                                            />
 
 
                                             {/* ◀ Prev */}

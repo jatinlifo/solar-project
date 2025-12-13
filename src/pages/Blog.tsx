@@ -38,7 +38,7 @@ const blogPosts = [
     id: 4,
     title: "Electrical Safety Tips for Your Home",
     excerpt: "Essential electrical safety practices every homeowner should know to prevent accidents and ensure a safe living environment.",
-    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80",
+    image: "https://static.vecteezy.com/system/resources/previews/039/339/377/non_2x/electrical-engineer-work-tester-measuring-voltage-and-current-of-power-electric-line-in-electrical-cabinet-control-for-industrial-production-photo.jpg",
     category: "Electrical",
     author: "Shreeji Team",
     date: "Nov 5, 2025",

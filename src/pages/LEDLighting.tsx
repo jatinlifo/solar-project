@@ -9,15 +9,15 @@ const productCategories = [
         icon: Lightbulb,
         title: "LED Lighting",
         description: "Energy-efficient lighting solutions for every space and requirement.",
-        images: ["/led-images/led-lighting/1.jpeg", "/led-images/led-lighting/2.jpeg", "/led-images/led-lighting/3.jpeg", "/led-images/led-lighting/4.jpeg"],
+        images: ["/led-images/led-lighting/1.jpeg", "/led-images/led-lighting/2.webp",],
         products: [
             // "LED Panel Lights",
             // "LED Bulbs",
             // "LED Tube Lights",
-            "Concealed Lights",
-            "Decorative Lights",
-            "Street Lights",
-            "Highway Lights",
+            // "Concealed Lights",
+            // "Decorative Lights",
+            "Street Light",
+            "Highway Light",
         ],
         color: "bg-primary",
     },
@@ -25,13 +25,13 @@ const productCategories = [
         icon: Lightbulb,
         title: "Bulbs & Tubes",
         description: "High brightness and energy saving LED bulbs and tube lights for residential and commercial use.",
-        images: ["/led-images/Bulb/1.jpeg"],
+        images: ["/led-images/Bulb/1.jpeg", "/led-images/Bulb/2.png", "/led-images/Bulb/3.jpg"],
         products: [
             "LED Bulbs",
-            "LED Tube Lights",
-            "Smart LED Bulbs",
+            "LED Tube Light",
+            "Smart LED Bulb",
             // "Decorative LED Bulbs",
-            "High Lumen Tube Lights",
+            "High Lumen Tube Light",
             // "Energy Efficient Tubes",
         ],
         color: "bg-accent",
@@ -41,14 +41,13 @@ const productCategories = [
         icon: Layers,
         title: "Concealed Lighting",
         description: "Modern concealed lighting solutions for ceilings, walls, and interior décor with a premium finish.",
-        images: ["/led-images/concealed/1.jpeg", "/led-images/concealed/2.jpeg"],
+        images: ["/led-images/concealed/1.webp", "/led-images/concealed/2.jpeg"],
         products: [
-            "Concealed Ceiling Lights",
-            "COB Concealed Lights",
-            "LED Strip Concealed Lighting",
-            "False Ceiling Lights",
-            "Warm & Cool Concealed Lights",
-            "Designer Concealed Lighting",
+            "Concealed Light",
+            "LED Strip Light",
+            "False Ceiling Light",
+            "Warm & Cool Light",
+            "Designer Concealed Light",
         ],
         color: "bg-accent",
         route: "concealed-lighting"
@@ -62,12 +61,12 @@ const productCategories = [
             "https://i.ytimg.com/vi/Gf8Hwp3iwCk/maxresdefault.jpg"
         ],
         products: [
-            "LED Decorative Lights",
-            "Wall Decorative Lights",
-            "Hanging Pendant Lights",
-            "Festival Decorative Lights",
+            "LED Decorative Light",
+            "Wall Decorative Light",
+            "Hanging Pendant Light",
+            "Festival Decorative Light",
             "Indoor Ambient Lights",
-            "Designer Decorative Lights",
+            "Designer Decorative Light",
         ],
         color: "bg-accent",
         route: "decorative-lights"
@@ -167,14 +166,12 @@ const LEDLighting = () => {
                                         images.length > 0 ? images[currentIndex % images.length] : "";
 
                                     return (
-                                        <div className="relative rounded-2xl overflow-hidden shadow-lg w-full h-[150px] sm:h-[180px] md:h-[260px] flex items-center justify-center bg-white">
-                                            {currentImage && (
-                                                <img
-                                                    src={currentImage}
-                                                    alt={category.title}
-                                                    className="h-full w-auto object-contain object-center"
-                                                />
-                                            )}
+                                       <div className="relative rounded-2xl overflow-hidden shadow-lg w-full aspect-[16/9] bg-white">
+                                            <img
+                                                src={currentImage}
+                                                alt={category.title}
+                                                className="w-full h-full object-contain brightness-110 contrast-110"
+                                            />
                                             {/* ◀ Prev */}
                                             <button
                                                 type="button"
@@ -221,18 +218,18 @@ const LEDLighting = () => {
                 <div className="container-wide">
                     <div className="bg-card rounded-3xl p-8 md:p-12 shadow-lg border border-border text-center">
                         <span className="inline-block px-4 py-1 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
-                            Bulk Orders
+                            Orders
                         </span>
                         <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-                            Looking for Bulk Deals?
+                            Looking for Deals?
                         </h2>
                         <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                            We offer competitive pricing for bulk orders. Contact us for special rates on large quantity purchases.
+                            We offer competitive pricing for orders. Contact us for special rates on large quantity purchases.
                         </p>
                         <div className="flex flex-wrap gap-4 justify-center">
                             <Button variant="accent" size="lg" asChild>
                                 <Link to="/contact">
-                                    Request Bulk Quote
+                                    Request Quote
                                     <ArrowRight className="w-5 h-5" />
                                 </Link>
                             </Button>

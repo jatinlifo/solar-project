@@ -107,7 +107,7 @@ const Services = () => {
                         <ArrowRight className="w-5 h-5" />
                       </Link>
                     </Button>
-                    <Button variant="accent" asChild>
+                    <Button variant="accent" asChild className="px-9">
                       <Link to={`/${service.route}`}>
                         View Service
                         <ArrowRight className="w-5 h-5" />

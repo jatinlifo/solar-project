@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Zap  } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -92,7 +92,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Address</h3>
-                    <p className="text-muted-foreground">h. No. 96/15, Ground Floor, Holambi Kalan, North Delhi-110082, India</p>
+                    <p className="text-muted-foreground">Kh. No. 96/15, Ground Floor, Holambi Kalan, North Delhi-110082, India</p>
                   </div>
                 </div>
 
@@ -102,18 +102,28 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Business Hours</h3>
-                    <p className="text-muted-foreground">Mon - Sat: 9:00 AM - 7:00 PM</p>
-                    <p className="text-muted-foreground">Sunday: Closed</p>
+                    <p className="text-muted-foreground">Mon - Sun: 9:00 AM - 7:00 PM</p>
+                    {/* <p className="text-muted-foreground">Sunday: Closed</p> */}
+                  </div>
+                </div>
+
+                 <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Zap className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground">Emergecny Support</h3>
+                    <p className="text-muted-foreground">24/7</p>
                   </div>
                 </div>
               </div>
 
               {/* GSTIN */}
-              <div className="p-4 bg-secondary rounded-xl">
+              {/* <div className="p-4 bg-secondary rounded-xl">
                 <p className="text-sm text-muted-foreground">
                   <strong className="text-foreground">GSTIN:</strong> [07BZDPJ7004G1ZN]
                 </p>
-              </div>
+              </div> */}
 
               {/* Why Contact Us */}
               <div className="bg-accent/10 p-6 rounded-xl">
@@ -236,20 +246,19 @@ const Contact = () => {
       </section>
 
       {/* Map Section  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3491.1537463750838!2d77.72904597530153!3d28.953163975491126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c64a5d7313f09%3A0x5498e7a5b94172a2!2sINOX%20PVS%20Mall!5e0!3m2!1sen!2sin!4v1765547848786!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}  
-      <section className="relative h-96 bg-secondary">
+<section className="relative h-96 bg-secondary">
   <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3491.1537463750838!2d77.72904597530153!3d28.953163975491126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c64a5d7313f09%3A0x5498e7a5b94172a2!2sINOX%20PVS%20Mall!5e0!3m2!1sen!2sin!4v1765547848786!5m2!1sen!2sin"
+    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3496.2184950056894!2d77.095941!3d28.802561999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDQ4JzA5LjIiTiA3N8KwMDUnNDUuNCJF!5e0!3m2!1sen!2sin!4v1765649341888!5m2!1sen!2sin"
     className="w-full h-full border-0"
-    allowFullScreen
     loading="lazy"
     referrerPolicy="no-referrer-when-downgrade"
   ></iframe>
 
+  {/* Click → Google Maps App / Web */}
   <div
     onClick={() =>
       window.open(
-        // https://www.google.com/maps/place/{PlaceName}/@{Lat},{Lng},{Zoom}
-        "https://www.google.com/maps/place/INOX+PVS+Mall/@28.953164,77.729046,17z",
+        "https://maps.app.goo.gl/ZpcA1KBkizd8y1DAA",
         "_blank"
       )
     }

@@ -9,7 +9,10 @@ const productCategories = [
         icon: Plug,
         title: "Switches & Sockets",
         description: "Premium quality electrical switches and sockets for safe, stylish, and reliable power connections.",
-        images: ["/electrical-images/switch-socat/1.jpeg", "/electrical-images/switch-socat/2.jpeg", "/electrical-images/switch-socat/3.jpeg", "/electrical-images/switch-socat/4.jpeg"],
+        images: ["/electrical-images/switch-socat/2.jpeg", "/electrical-images/switch-socat/3.jpeg", "/electrical-images/switch-socat/4.jpeg",
+             "/electrical-images/switch-socat/5.webp","/electrical-images/switch-socat/1.jpeg",
+           
+        ],
         products: [
             "Modular Switches",
             "Electrical Sockets",
@@ -165,13 +168,11 @@ const ElectricalEquipment = () => {
 
                                     return (
                                         <div className="relative rounded-2xl overflow-hidden shadow-lg w-full aspect-[16/9] bg-white">
-                                            {currentImage && (
-                                                <img
-                                                    src={currentImage}
-                                                    alt={category.title}
-                                                    className="w-full h-full object-contain object-center"
-                                                />
-                                            )}
+                                            <img
+                                                src={currentImage}
+                                                alt={category.title}
+                                                className="w-full h-full object-contain brightness-110 contrast-110"
+                                            />
 
                                             {/* ◀ Prev */}
                                             <button

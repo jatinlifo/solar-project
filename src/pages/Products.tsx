@@ -11,12 +11,10 @@ const productCategories = [
     description: "Complete solar energy solutions for residential and commercial applications.",
     image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80",
     products: [
-      "Monocrystalline Solar Panels",
-      "Polycrystalline Solar Panels",
-      "Solar Inverters",
-      "Solar Batteries",
-      "Mounting Structures",
-      "Complete Solar Kits",
+      "Solar Energy",
+      "Solar Panel Solution",
+      "Solar Inverter & Batteries",
+      "Structure and Accessories",
     ],
     color: "bg-accent",
   },
@@ -27,12 +25,10 @@ const productCategories = [
     description: "Future-ready electric vehicle charging solutions.",
     image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80",
     products: [
-      "AC Home Chargers",
+      "AC EV Chargers",
       "DC Fast Chargers",
-      "Commercial Charging Stations",
-      "Portable EV Chargers",
-      "Smart Charging Solutions",
-      "Installation Accessories",
+      "E-Rickshaw Chargers",
+      "Two & Three Wheeler Chargers",
     ],
     color: "bg-green-600",
   },
@@ -43,11 +39,9 @@ const productCategories = [
     description: "Premium quality electrical products from trusted brands.",
     image: "https://lh6.googleusercontent.com/proxy/2viYAeK1dj5_KpDUCGORONTVIT-HQ_1ERYQPnyZ5LAvIoqAJslOWojHJ8QXmVOJaTe3pK9SyG1FuycU3OoZqgX7xG_M_Iul7O9Njb4KeXpwYrCvIPcFYhh59I_ogZQ",
     products: [
-      "Modular Switches",
-      "Electrical Wires",
-      "MCBs & RCCBs",
-      "Distribution Boards",
-      "Sockets & Plates",
+      "Switches & Sockets",
+      "Wires & Cables",
+      "MCB & DBs",
       "Electrical Accessories",
     ],
     color: "bg-blue-600",
@@ -59,12 +53,10 @@ const productCategories = [
     description: "Energy-efficient lighting solutions for every space and requirement.",
     image: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=800&q=80",
     products: [
-      "LED Panel Lights",
-      "LED Bulbs",
-      "LED Tube Lights",
-      "Concealed Lights",
+      "LED Lighting",
+      "Bulbs & Tubes",
+      "Concealed Lighting",
       "Decorative Lights",
-      "Street Lights",
     ],
     color: "bg-primary",
   },
@@ -139,8 +131,8 @@ const Products = () => {
                   </div>
                 </div>
               </div>
-              <div className="block md:hidden px-4 !-mb-10 md:-mb-0">
-                <div className={`inline-flex items-center gap-2 ${category.color}/10 rounded-full`}>
+              <div className="block md:hidden px-2 !-mb-10 md:-mb-0">
+                <div className={`inline-flex px-2 py-1 items-center gap-2 ${category.color}/10 rounded-full`}>
                   <category.icon className={`w-5 h-5 ${category.color === "bg-accent" ? "text-accent" : category.color === "bg-primary" ? "text-primary" : category.color === "bg-blue-600" ? "text-blue-600" : "text-green-600"}`} />
                   <span className={`text-sm font-semibold ${category.color === "bg-accent" ? "text-accent" : category.color === "bg-primary" ? "text-primary" : category.color === "bg-blue-600" ? "text-blue-600" : "text-green-600"}`}>
                     {category.title}

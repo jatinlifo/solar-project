@@ -30,7 +30,7 @@ const projects = [
     id: 4,
     title: "Industrial Electrical Work",
     category: "Electrical",
-    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80",
+    image: "https://www.bing.com/th/id/OIP.KqL0pgustFn4ObqeIs7oWAHaEM?w=294&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1",
     description: "Complete electrical system for manufacturing unit",
   },
   {
@@ -58,7 +58,7 @@ const projects = [
     id: 8,
     title: "Residential EV Charger",
     category: "EV Charger",
-    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.squarespace-cdn.com/content/v1/5f3b08d4515c242514c95656/f7890c9c-7fcc-439b-b285-5d1328b375c1/commercial-ev-charging-station.jpg",
     description: "Home EV charging solution with smart features",
   },
 ];

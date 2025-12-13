@@ -9,7 +9,7 @@ const productCategories = [
     icon: Plug,
     title: "Home & Commercial Plumbing",
     description: "Professional new plumbing installation with high-quality fittings, leak-free work, and durable performance for homes and businesses.",
-    images: ["https://www.leecontracting.com/wp-content/uploads/2020/03/electrical-install-1-e1584540533995.jpg?utm_source=chatgpt.com", "https://tristateec.com/wp-content/uploads/2021/04/2021-03-working-on-high-voltage-industrial-electrical-project-chattnooga.jpg?utm_source=chatgpt.com"],
+    images: ["/plumbing-service-images/1.jpg", "/plumbing-service-images/2.webp", "/plumbing-service-images/3.jpg", "/plumbing-service-images/4.jpg"],
     products: [
       "New Installation",
       "Open Plumbing",
