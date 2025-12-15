@@ -100,7 +100,7 @@ const ServicesPreview = () => {
          {/* CTA */}
         <div className="text-center mt-12">
           <Button variant="accent" size="lg" asChild>
-            <Link to="/products">
+            <Link to="/services">
                All Services
               <ArrowRight className="w-5 h-5" />
             </Link>

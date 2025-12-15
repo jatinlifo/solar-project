@@ -13,7 +13,7 @@ export default function Article() {
         {/* Company Info */}
         <div className="mb-10 border-l-4 border-[#CEA42A] pl-5">
           <h2 className="text-2xl md:text-3xl font-bold text-[#CEA42A]">
-            SHREEJEE ENTERPRISES
+            SHREEJI ENTERPRISES
           </h2>
           <p className="text-gray-400 mt-2 text-sm">
             Trusted Partner in Electrical, Solar & Power Solutions
@@ -24,7 +24,7 @@ export default function Article() {
         <div className="space-y-7 text-gray-300 text-base md:text-lg leading-relaxed">
 
           <p>
-            SHREEJEE ENTERPRISES is a professionally managed company delivering
+            SHREEJI ENTERPRISES is a professionally managed company delivering
             reliable electrical and solar energy solutions for residential,
             commercial, and industrial projects. With the growing demand for
             energy efficiency and sustainability, modern power systems are
@@ -44,7 +44,7 @@ export default function Article() {
             Solar energy has emerged as one of the most powerful renewable energy
             sources in the world. By installing high-efficiency solar panels,
             homes and businesses can generate clean electricity while reducing
-            dependence on traditional power grids. SHREEJEE ENTERPRISES provides
+            dependence on traditional power grids. SHREEJI ENTERPRISES provides
             end-to-end solar solutions, including system design, installation,
             and long-term maintenance.
           </p>
@@ -60,7 +60,7 @@ export default function Article() {
           <p>
             Electric vehicle charging infrastructure is another rapidly growing
             segment. With the rise of electric vehicles, safe and fast charging
-            stations are becoming essential. SHREEJEE ENTERPRISES supports the
+            stations are becoming essential. SHREEJI ENTERPRISES supports the
             future of mobility by offering reliable EV charging solutions for
             homes, offices, and commercial spaces.
           </p>
@@ -68,7 +68,7 @@ export default function Article() {
           <p>
             The future of energy lies in smart grids, intelligent monitoring
             systems, and fully automated power management. With innovation,
-            experience, and technical expertise, SHREEJEE ENTERPRISES is committed
+            experience, and technical expertise, SHREEJI ENTERPRISES is committed
             to delivering sustainable, cost-effective, and future-ready energy
             solutions.
           </p>
@@ -86,7 +86,7 @@ export default function Article() {
                 Article Published by
               </p>
               <p className="text-lg font-semibold text-[#CEA42A] mt-1">
-                SHREEJEE ENTERPRISES
+                SHREEJI ENTERPRISES
               </p>
               <p className="text-xs text-gray-500 mt-1">
                 Electrical • Solar • Power Solutions

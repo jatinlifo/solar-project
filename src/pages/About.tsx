@@ -73,7 +73,7 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Welcome to shree jee Enterprises. Our electrical maintenance services include regular inspection, testing, and servicing of your electrical systems to ensure they are functioning correctly and safely. Our certified professionals conduct thorough on-site inspections to identify potential problems such as faulty wiring, overloaded circuits, and other electrical issues that could lead to equipment failure and downtime.
+                  Welcome to Shreeji Enterprises. Our electrical maintenance services include regular inspection, testing, and servicing of your electrical systems to ensure they are functioning correctly and safely. Our certified professionals conduct thorough on-site inspections to identify potential problems such as faulty wiring, overloaded circuits, and other electrical issues that could lead to equipment failure and downtime.
                 </p>
                 <p>
                   Our goal is to provide all our clients with reliable and cost-effective electrical engineering solutions and systems. We specialize in understanding project requirements and working with clients from the initial stages to address their key needs in design, execution, vendor selection, and electrical safety issues.

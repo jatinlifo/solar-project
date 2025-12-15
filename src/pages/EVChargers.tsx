@@ -14,12 +14,12 @@ const productCategories = [
             "/ev-images/ac-ev/2.jpeg",
         ],
         products: [
-            "3.3KW Portable Chargers",
-            "3.3KW Wall Mounted Chargers",
+            "3.3KW Portable Charger",
+            "3.3KW Wall Mounted Charger",
             "7.2KW Portable Chargers",
-            "7.2KW Wall Mounted Chargers",
-            "10KW Bharat AC Chargers",
-            "22KW 3Phase Chargers",
+            "7.2KW Wall Mounted Charger",
+            "10KW Bharat AC Charger",
+            "22KW 3Phase Charger",
         ],
         color: "bg-accent",
         route: "ac-ev-chargers"
@@ -30,10 +30,10 @@ const productCategories = [
         description: "High power DC fast chargers for ultra-fast charging at highways and public stations.",
         images: ["/ev-images/dc-ev/30.jpeg", "/ev-images/dc-ev/60.webp", "/ev-images/dc-ev/120.avif", "/ev-images/dc-ev/pdc.avif"],
         products: [
-            "30kW DC Chargers",
-            "60kW DC Chargers",
-            "120kW Ultra Fast Chargers",
-            "Public DC Charging Stations",
+            "30kW DC Charger",
+            "60kW DC Charger",
+            "120kW Ultra Fast Charger",
+            "Public DC Charging Station",
         ],
         color: "bg-accent",
         route: "dc-fast-chargers"
@@ -44,10 +44,10 @@ const productCategories = [
         description: "Compact and reliable EV chargers specially designed for daily home charging needs.",
         images: ["/ev-images/e-rikshaw/5.webp","/ev-images/e-rikshaw/1.jpg", "/ev-images/e-rikshaw/2.avif", "/ev-images/e-rikshaw/3.jpeg", "/ev-images/e-rikshaw/4.jpg"],
         products: [
-            "48V 25A Chargers",
-            "48V 18A Chargers",
-            "51.2V 20A Chargers",
-            "72V 15A Chargers, etc.",
+            "48V 25A Charger",
+            "48V 18A Charger",
+            "51.2V 20A Charger",
+            "72V 15A Charger, etc.",
         ],
         color: "bg-accent",
         route: "home-ev-chargers"
@@ -58,10 +58,10 @@ const productCategories = [
         description: "Heavy-duty EV charging solutions for offices, malls, hotels, and parking areas.",
         images: ["/ev-images/two-wheeler/1.jpg", "/ev-images/two-wheeler/2.avif", "/ev-images/two-wheeler/3.webp", "/ev-images/two-wheeler/4.webp"],
         products: [
-            "29V 5A Chargers",
-            "12V 3A Chargers",
-            "12V 10A Chargers",
-            "36V 2A Chargers, etc.",
+            "29V 5A Charger",
+            "12V 3A Charger",
+            "12V 10A Charger",
+            "36V 2A Charger, etc.",
         ],
         color: "bg-accent",
         route: "commercial-ev-chargers"

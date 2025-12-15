@@ -17,7 +17,7 @@ const productCategories = [
       "Inverter Health Check",
       "Performance Monitoring",
       "Repair and Replacement",
-      "Techinal Support 24/7",
+      "Technical Support 24/7",
     ],
     color: "bg-accent",
     route: "switches-and-sockets"

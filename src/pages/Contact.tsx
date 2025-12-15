@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Zap  } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Zap } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -107,7 +107,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                 <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Zap className="w-6 h-6 text-primary" />
                   </div>
@@ -207,11 +207,24 @@ const Contact = () => {
                         className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                       >
                         <option value="">Select a subject</option>
-                        <option value="solar">Solar Installation</option>
-                        <option value="led">LED Lighting</option>
-                        <option value="electrical">Electrical Work</option>
-                        <option value="ev">EV Charger</option>
-                        <option value="plumbing">Plumbing Services</option>
+
+                        <option value="solar-installation">Solar Installation</option>
+                        <option value="solar-service">Solar Service</option>
+
+                        <option value="ev-order">EV Charger Order</option>
+                        <option value="ev-service">EV Charger Service</option>
+
+                        <option value="electrical-equipment">Electrical Equipment</option>
+                        <option value="led-lighting">LED Lighting</option>
+                        <option value="new-electrical-work">New Electrical Work</option>
+                        <option value="electrical-service">Electrical Service</option>
+
+                        <option value="plumbing-new">New Plumbing Work</option>
+                        <option value="plumbing-service">Plumbing Service</option>
+
+                        <option value="amc-service">AMC Service</option>
+                        <option value="battery-repair">Batteries Repair & Replacement</option>
+
                         <option value="bulk">Bulk Order Inquiry</option>
                         <option value="other">Other</option>
                       </select>
@@ -245,26 +258,26 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Section  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3491.1537463750838!2d77.72904597530153!3d28.953163975491126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c64a5d7313f09%3A0x5498e7a5b94172a2!2sINOX%20PVS%20Mall!5e0!3m2!1sen!2sin!4v1765547848786!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}  
-<section className="relative h-96 bg-secondary">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3496.2184950056894!2d77.095941!3d28.802561999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDQ4JzA5LjIiTiA3N8KwMDUnNDUuNCJF!5e0!3m2!1sen!2sin!4v1765649341888!5m2!1sen!2sin"
-    className="w-full h-full border-0"
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  ></iframe>
+      {/* Map Section  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3491.1537463750838!2d77.72904597530153!3d28.953163975491126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c64a5d7313f09%3A0x5498e7a5b94172a2!2sINOX%20PVS%20Mall!5e0!3m2!1sen!2sin!4v1765547848786!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
+      <section className="relative h-96 bg-secondary">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3496.2184950056894!2d77.095941!3d28.802561999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDQ4JzA5LjIiTiA3N8KwMDUnNDUuNCJF!5e0!3m2!1sen!2sin!4v1765649341888!5m2!1sen!2sin"
+          className="w-full h-full border-0"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
 
-  {/* Click → Google Maps App / Web */}
-  <div
-    onClick={() =>
-      window.open(
-        "https://maps.app.goo.gl/ZpcA1KBkizd8y1DAA",
-        "_blank"
-      )
-    }
-    className="absolute inset-0 cursor-pointer"
-  ></div>
-</section>
+        {/* Click → Google Maps App / Web */}
+        <div
+          onClick={() =>
+            window.open(
+              "https://maps.app.goo.gl/ZpcA1KBkizd8y1DAA",
+              "_blank"
+            )
+          }
+          className="absolute inset-0 cursor-pointer"
+        ></div>
+      </section>
 
     </Layout>
   );

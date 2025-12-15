@@ -39,9 +39,9 @@ const productCategories = [
         images: ["/solar-images/batteries/1.webp", "/solar-images/batteries/2.jpg", "/solar-images/batteries/3.jpg", "/solar-images/batteries/4.webp"],
         products: [
             "Solar Inverter",
-            "Solar Batteries",
-            "Lithium-ion Batteries",
-            "Tubular Batteries",
+            "Solar Battery",
+            "Lithium-ion Battery",
+            "Tubular Battery",
             // "SMF Batteries",
         ],
         color: "bg-accent",

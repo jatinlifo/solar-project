@@ -25,9 +25,9 @@ const productCategories = [
         icon: Lightbulb,
         title: "Bulbs & Tubes",
         description: "High brightness and energy saving LED bulbs and tube lights for residential and commercial use.",
-        images: ["/led-images/Bulb/1.jpeg", "/led-images/Bulb/2.png", "/led-images/Bulb/3.jpg"],
+        images: ["/led-images/Bulb/4.jpeg", "/led-images/Bulb/1.jpeg", "/led-images/Bulb/2.png", "/led-images/Bulb/3.jpg"],
         products: [
-            "LED Bulbs",
+            "LED Bulb",
             "LED Tube Light",
             "Smart LED Bulb",
             // "Decorative LED Bulbs",
@@ -41,7 +41,7 @@ const productCategories = [
         icon: Layers,
         title: "Concealed Lighting",
         description: "Modern concealed lighting solutions for ceilings, walls, and interior décor with a premium finish.",
-        images: ["/led-images/concealed/1.webp", "/led-images/concealed/2.jpeg"],
+        images: ["/led-images/concealed/1.jpeg", "/led-images/concealed/1.webp", "/led-images/concealed/2.jpeg"],
         products: [
             "Concealed Light",
             "LED Strip Light",
@@ -54,7 +54,7 @@ const productCategories = [
     },
     {
         icon: Sparkles,
-        title: "Decorative Lights",
+        title: "Decorative Light",
         description: "Stylish and ambient decorative lighting solutions for homes, festivals, events, and interior décor.",
         images: ["https://i.ytimg.com/vi/xdMYh2h6Vyo/maxresdefault.jpg", "https://media.designcafe.com/wp-content/uploads/2020/11/24174705/decoration-lights-for-home.jpg",
             "https://indiacsr.in/wp-content/uploads/2024/10/Diwali-Light-Decor-Ideas-For-Indian-Homes.jpg", "https://i.ytimg.com/vi/bq4oQ-jc4PQ/maxresdefault.jpg",
@@ -65,7 +65,7 @@ const productCategories = [
             "Wall Decorative Light",
             "Hanging Pendant Light",
             "Festival Decorative Light",
-            "Indoor Ambient Lights",
+            "Indoor Ambient Light",
             "Designer Decorative Light",
         ],
         color: "bg-accent",
