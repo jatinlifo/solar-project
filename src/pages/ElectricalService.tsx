@@ -54,7 +54,7 @@ const productCategories = [
     icon: Cable,
     title: "Electric Service & Maintenance",
     description: "Comprehensive electrical services including wiring, repairs, safety inspections, load management, and system upgrades for residential, commercial, and industrial properties—ensuring reliability, safety, and efficient power distribution.",
-    images: ["https://static.vecteezy.com/system/resources/previews/030/470/720/non_2x/electrician-working-in-fuse-box-closeup-electrical-panel-ai-generated-photo.jpg",
+    images: ["https://i0.wp.com/www.ugabox.com/images/business/directory/electrical-engineering/mg-electrical-engineering/mg-electrical-engineering-solar-power-installation-house-wiring-kampala-uganda-04.jpg","https://static.vecteezy.com/system/resources/previews/030/470/720/non_2x/electrician-working-in-fuse-box-closeup-electrical-panel-ai-generated-photo.jpg",
       "https://mega.com.sg/wp-content/uploads/2020/12/electrical-wiring-scaled.jpg", "https://img.freepik.com/premium-photo/electricity-electrical-maintenance-service-engineer-hand-holding-ac-voltmeter-checking-electric-current-voltage-circuit-breaker-terminal-cable-wiring-main-power-distribution-board_101448-4286.jpg?w=2000"],
     products: [
       "New Installation",

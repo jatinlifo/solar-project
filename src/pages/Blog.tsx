@@ -1,12 +1,12 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Calendar, User, ArrowRight, Clock } from "lucide-react";
+import { Calendar, User, ArrowRight, Clock, Car, Sun } from "lucide-react";
 
 const blogPosts = [
   {
     id: 1,
-    title: "The Future of Solar Energy: Trends to Watch in 2025",
+    title: "The Future of Solar Energy and EV Chargers: Trends to Watch in 2025",
     excerpt: "Discover the latest innovations in solar technology and what they mean for homeowners and businesses looking to go green.",
     image: "/Blog-images/1.jpeg",
     category: "Solar Energy",
@@ -101,9 +101,18 @@ const Blog = () => {
                   />
                 </div>
                 <div className="p-8 lg:p-12 flex flex-col justify-center">
-                  <span className="inline-block px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4 w-fit">
-                    {blogPosts[0].category}
-                  </span>
+                  <div className="flex flex-wrap items-center gap-4 mb-8">
+                    <span className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-semibold">
+                      <Sun className="w-4 h-4" />
+                      {blogPosts[0].category}
+                    </span>
+
+                    <span className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-green-600 rounded-full text-xs font-semibold">
+                      <Car className="w-4 h-4" />
+                      EV Charger
+                    </span>
+                  </div>
+
                   <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
                     {blogPosts[0].title}
                   </h2>

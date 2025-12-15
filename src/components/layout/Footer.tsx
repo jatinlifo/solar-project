@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Zap, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Zap, Facebook, Twitter, Linkedin, Instagram, Youtube } from "lucide-react";
 import { FaXTwitter, FaWhatsapp } from "react-icons/fa6";
 import { title } from "process";
 
@@ -29,11 +29,11 @@ const Footer = () => {
                 Your trusted partner for solar systems, electrical solutions, LED lighting, and EV charging infrastructure.
               </p>
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-3 ">
               {/* Facebook */}
               <a
-                href="#"
-                className="w-10 h-10 bg-[#1877F2] rounded-lg flex items-center justify-center
+                href="https://www.facebook.com/share/17V1tAc2cf/"
+                className="w-10 h-9  bg-[#1877F2] rounded-lg flex items-center justify-center
                transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 <Facebook className="w-5 h-5 text-white" />
@@ -42,7 +42,7 @@ const Footer = () => {
               {/* LinkedIn */}
               <a
                 href="#"
-                className="w-10 h-10 bg-[#0A66C2] rounded-lg flex items-center justify-center
+                className="w-10 h-9 bg-[#0A66C2] rounded-lg flex items-center justify-center
                transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 <Linkedin className="w-5 h-5 text-white" />
@@ -50,8 +50,8 @@ const Footer = () => {
 
               {/* Instagram */}
               <a
-                href="#"
-                className="w-10 h-10 bg-[#E4405F] rounded-lg flex items-center justify-center
+                href="https://www.instagram.com/shreeji_enterprises8?igsh=MWx6MDhueHl4MTJwag=="
+                className="w-10 h-9 bg-[#E4405F] rounded-lg flex items-center justify-center
                transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 <Instagram className="w-5 h-5 text-white" />
@@ -60,7 +60,7 @@ const Footer = () => {
               {/* X (Official) */}
               <a
                 href="#"
-                className="w-10 h-10 bg-black rounded-lg flex items-center justify-center
+                className="w-10 h-9 bg-black rounded-lg flex items-center justify-center
                transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 <FaXTwitter className="w-5 h-5 text-white" />
@@ -69,11 +69,22 @@ const Footer = () => {
               {/* WhatsApp (Official) */}
               <a
                 href="#"
-                className="w-10 h-10 bg-[#25D366] rounded-lg flex items-center justify-center
+                className="w-10 h-9 bg-[#25D366] rounded-lg flex items-center justify-center
                transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 <FaWhatsapp className="w-5 h-5 text-white" />
               </a>
+
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-9 bg-[#FF0000] rounded-lg flex items-center justify-center
+             transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              >
+                <Youtube className="w-5 h-5 text-white" />
+              </a>
+
             </div>
 
           </div>

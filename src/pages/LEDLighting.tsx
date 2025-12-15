@@ -9,7 +9,7 @@ const productCategories = [
         icon: Lightbulb,
         title: "LED Lighting",
         description: "Energy-efficient lighting solutions for every space and requirement.",
-        images: ["/led-images/led-lighting/1.jpeg", "/led-images/led-lighting/2.webp",],
+        images: ["/led-images/led-lighting/3.jpeg","/led-images/led-lighting/1.jpeg", "/led-images/led-lighting/2.webp",],
         products: [
             // "LED Panel Lights",
             // "LED Bulbs",
@@ -25,7 +25,7 @@ const productCategories = [
         icon: Lightbulb,
         title: "Bulbs & Tubes",
         description: "High brightness and energy saving LED bulbs and tube lights for residential and commercial use.",
-        images: ["/led-images/Bulb/4.jpeg", "/led-images/Bulb/1.jpeg", "/led-images/Bulb/2.png", "/led-images/Bulb/3.jpg"],
+        images: ["/led-images/Bulb/4.jpeg", "/led-images/Bulb/1.jpeg", "/led-images/Bulb/2.png", "/led-images/Bulb/3.jpg", "/led-images/Bulb/5.jpeg"],
         products: [
             "LED Bulb",
             "LED Tube Light",
@@ -41,7 +41,7 @@ const productCategories = [
         icon: Layers,
         title: "Concealed Lighting",
         description: "Modern concealed lighting solutions for ceilings, walls, and interior décor with a premium finish.",
-        images: ["/led-images/concealed/1.jpeg", "/led-images/concealed/1.webp", "/led-images/concealed/2.jpeg"],
+        images: ["/led-images/concealed/1.jpeg", "/led-images/concealed/3.jpeg", "/led-images/concealed/2.jpeg"],
         products: [
             "Concealed Light",
             "LED Strip Light",

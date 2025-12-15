@@ -26,7 +26,7 @@ const productCategories = [
     icon: Cable,
     title: "EV- Chargers AMC Service",
     description: "Reliable Annual Maintenance Contract (AMC) service for EV chargers, ensuring smooth performance, timely inspections, and preventive care to avoid unexpected breakdowns.",
-    images: ["/amc-service-images/ev-amc-service/2.jpeg", "/amc-service-images/ev-amc-service/1.jpeg",],
+    images: ["/amc-service-images/ev-amc-service/3.jpeg","/amc-service-images/ev-amc-service/2.jpeg", "/amc-service-images/ev-amc-service/1.jpeg",],
     products: [
       "Software Updates",
       "Repair & Replacement",

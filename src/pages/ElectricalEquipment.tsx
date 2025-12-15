@@ -10,7 +10,7 @@ const productCategories = [
         title: "Switch & Socket",
         description: "Premium quality electrical switch and socket for safe, stylish, and reliable power connections.",
         images: ["/electrical-images/switch-socat/2.jpeg", "/electrical-images/switch-socat/3.jpeg", "/electrical-images/switch-socat/4.jpeg",
-             "/electrical-images/switch-socat/5.webp","/electrical-images/switch-socat/1.jpeg",
+             "/electrical-images/switch-socat/5.png","/electrical-images/switch-socat/1.jpeg",
            
         ],
         products: [

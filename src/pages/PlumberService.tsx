@@ -9,7 +9,7 @@ const productCategories = [
     icon: Plug,
     title: "Home & Commercial Plumbing",
     description: "Professional new plumbing installation with high-quality fittings, leak-free work, and durable performance for homes and businesses.",
-    images: ["/plumbing-service-images/1.jpg", "/plumbing-service-images/2.webp", "/plumbing-service-images/3.jpg", "/plumbing-service-images/4.jpg"],
+    images: ["/plumbing-service-images/1.jpeg", "/plumbing-service-images/2.jpeg", "/plumbing-service-images/3.jpg", "/plumbing-service-images/4.jpg"],
     products: [
       "New Installation",
       "Open Plumbing",
@@ -23,8 +23,8 @@ const productCategories = [
     icon: Cable,
     title: "Plumbing Service",
     description: "Reliable plumbing solutions including installation, repair, leakage fixing, pipeline maintenance, and drainage system support for residential, commercial, and industrial properties.",
-    images: ["https://www.nuflowmidwest.com/wp-content/uploads/2023/09/The-8-Advantages-of-Hiring-a-Professional-Plumbing-Service-for-Your-Property-Management-Needs-1.png?utm_source=chatgpt.com", "https://supremepipe.com/wp-content/uploads/2023/02/hes-a-pro-at-plumbing-shot-of-a-plumber-fixing-a-2022-10-10-23-51-30-utc-1.jpg?utm_source=chatgpt.com",
-      "https://pugetsoundplumbing.com/wp-content/uploads/2023/12/new-home-plumbing-installation.jpg?utm_source=chatgpt.com",
+    images: ["/plumbing-service-images/part2/1.jpeg", "https://supremepipe.com/wp-content/uploads/2023/02/hes-a-pro-at-plumbing-shot-of-a-plumber-fixing-a-2022-10-10-23-51-30-utc-1.jpg?utm_source=chatgpt.com",
+      "/plumbing-service-images/part2/3.jpeg", "/plumbing-service-images/part2/4.jpeg",
     ],
     products: [
       "Leakage Repair",
@@ -129,7 +129,7 @@ const PlumberService = () => {
                     images.length > 0 ? images[currentIndex % images.length] : "";
 
                   return (
-                    <div className="relative rounded-2xl overflow-hidden shadow-lg w-full h-[220px] md:h-[360px]">
+                    <div className="relative rounded-2xl overflow-hidden shadow-lg w-full h-[220px] md:h-[400px]">
                       <img
                         src={currentImage}
                         alt={category.title}
