@@ -101,14 +101,14 @@ const Blog = () => {
                   />
                 </div>
                 <div className="p-8 lg:p-12 flex flex-col justify-center">
-                  <div className="flex flex-wrap items-center gap-4 mb-8">
-                    <span className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-semibold">
-                      <Sun className="w-4 h-4" />
+                  <div className="flex flex-nowrap  items-center gap-4 mb-8">
+                    <span className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 text-accent rounded-full text-[10px] md:text-sm font-semibold">
+                      <Sun className="w-3 h-3 md:w-4 md:h-4" />
                       {blogPosts[0].category}
                     </span>
 
-                    <span className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-green-600 rounded-full text-xs font-semibold">
-                      <Car className="w-4 h-4" />
+                    <span className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-green-600 rounded-full text-[10px] md:text-xs font-semibold">
+                      <Car className="w-3 h-3 md:w-4 md:h-4" />
                       EV Charger
                     </span>
                   </div>
