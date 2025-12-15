@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Zap, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { FaXTwitter, FaWhatsapp } from "react-icons/fa6";
 import { title } from "process";
 
 const Footer = () => {
@@ -22,26 +23,59 @@ const Footer = () => {
             </Link>
             <div>
               <p className="text-primary-foreground/80 text-sm leading-relaxed font-bold italic">
-              "The Foundation of Growth and Excellence"
-            </p>
-            <p className="text-primary-foreground/80 leading-relaxed">
-              Your trusted partner for solar systems, electrical solutions, LED lighting, and EV charging infrastructure.
-            </p>
+                "The Foundation of Growth and Excellence"
+              </p>
+              <p className="text-primary-foreground/80 leading-relaxed">
+                Your trusted partner for solar systems, electrical solutions, LED lighting, and EV charging infrastructure.
+              </p>
             </div>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-[#0A284E] transition-colors">
-                <Facebook className="w-5 h-5" />
+              {/* Facebook */}
+              <a
+                href="#"
+                className="w-10 h-10 bg-[#1877F2] rounded-lg flex items-center justify-center
+               transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              >
+                <Facebook className="w-5 h-5 text-white" />
               </a>
-              <a href="#" className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-[#0A284E] transition-colors">
-                <Twitter className="w-5 h-5" />
+
+              {/* LinkedIn */}
+              <a
+                href="#"
+                className="w-10 h-10 bg-[#0A66C2] rounded-lg flex items-center justify-center
+               transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              >
+                <Linkedin className="w-5 h-5 text-white" />
               </a>
-              <a href="#" className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-[#0A284E] transition-colors">
-                <Linkedin className="w-5 h-5" />
+
+              {/* Instagram */}
+              <a
+                href="#"
+                className="w-10 h-10 bg-[#E4405F] rounded-lg flex items-center justify-center
+               transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              >
+                <Instagram className="w-5 h-5 text-white" />
               </a>
-              <a href="#" className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-[#0A284E] transition-colors">
-                <Instagram className="w-5 h-5" />
+
+              {/* X (Official) */}
+              <a
+                href="#"
+                className="w-10 h-10 bg-black rounded-lg flex items-center justify-center
+               transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              >
+                <FaXTwitter className="w-5 h-5 text-white" />
+              </a>
+
+              {/* WhatsApp (Official) */}
+              <a
+                href="#"
+                className="w-10 h-10 bg-[#25D366] rounded-lg flex items-center justify-center
+               transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              >
+                <FaWhatsapp className="w-5 h-5 text-white" />
               </a>
             </div>
+
           </div>
 
           {/* Quick Links */}
@@ -65,16 +99,16 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-bold text-lg mb-6">Our Products</h4>
             <ul className="space-y-3">
-              {[{title : "Solar Systems", route: "solar-system"},  {title: "EV Chargers", route: "ev-chargers"},{title:"Electrical Equipment", route: "electrical-equipment"},
-               {title: "LED Lighting", route: "led-lighting"},{title: "Electrical Service", route: "electrical-service"},
-                 {title: "Plumbing Service", route:"plumbing-service"}, {title: "AMC Service", route: "amc-service"}].
-               map((item) => (
-                <li key={item.title}>
-                  <Link to={`/${item.route}`} className="text-primary-foreground/80 hover:text-accent transition-colors">
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
+              {[{ title: "Solar Systems", route: "solar-system" }, { title: "EV Chargers", route: "ev-chargers" }, { title: "Electrical Equipment", route: "electrical-equipment" },
+              { title: "LED Lighting", route: "led-lighting" }, { title: "Electrical Service", route: "electrical-service" },
+              { title: "Plumbing Service", route: "plumbing-service" }, { title: "AMC Service", route: "amc-service" }].
+                map((item) => (
+                  <li key={item.title}>
+                    <Link to={`/${item.route}`} className="text-primary-foreground/80 hover:text-accent transition-colors">
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
             </ul>
           </div>
 
