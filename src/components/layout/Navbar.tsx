@@ -87,7 +87,7 @@ const Navbar = () => {
                 {/* <h1 className="font-display font-bold text-xl text-[#CEA42A] leading-tight">
                   SHREEJI ENTERPRISES
                 </h1> */}
-                 <h1 className="font-display text-xl font-bold text-[#CEA42A]">
+                 <h1 className="font-display text-xl font-bold text-[#D1A730]">
                   SHREEJI ENTERPRISES
                 </h1>
                 {/* <
