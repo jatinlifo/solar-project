@@ -198,7 +198,7 @@
 
 // export default Gallery;
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import { X } from "lucide-react";
 
@@ -214,35 +214,26 @@ const gallery = {
     "/Gallery/solar/6.jpeg",
     "/Gallery/solar/7.jpeg",
     "/Gallery/solar/8.jpeg",
-    "/Gallery/solar/8.jpeg",
+    "/Gallery/solar/9.jpeg",
     "/Gallery/solar/10.jpeg",
     "/Gallery/solar/11.jpeg",
     "/Gallery/solar/12.jpeg",
     "/Gallery/solar/13.jpeg",
-    // "/Gallery/solar/5.jpeg",
   ],
   EVCharger: [
     "/Gallery/ev/1.jpeg",
     "/Gallery/ev/2.jpeg",
   ],
-  Electrical: [
-    // "/Gallery/electrical/1.jpg",
-    // "/Gallery/electrical/2.jpg",
-    // "/Gallery/electrical/3.jpg",
-  ],
+  Electrical: [],
   Plumbing: [
     "/Gallery/plumbing/1.jpeg",
     "/Gallery/plumbing/2.jpeg",
     "/Gallery/plumbing/3.jpeg",
   ],
-  LED: [
-    // "/Gallery/led/1.jpg",
-    // "/Gallery/led/2.jpg",
-    // "/gallery/led/3.jpg",
-  ],
+  LED: [],
 };
 
-/* ================= FILTER BUTTONS ================= */
+/* ================= FILTERS ================= */
 
 const filters = [
   { label: "All", key: "All" },
@@ -258,13 +249,41 @@ const filters = [
 const Gallery = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const [activeImage, setActiveImage] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null);
+  const [touchStartX, setTouchStartX] = useState(null);
 
-  // All images (for "All")
   const allImages = Object.values(gallery).flat();
-
-  // Images to show based on filter
   const imagesToShow =
     activeFilter === "All" ? allImages : gallery[activeFilter] || [];
+
+  /* ========== KEYBOARD SUPPORT (LOOP) ========== */
+  useEffect(() => {
+    if (activeImage === null) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setActiveImage(null);
+        setActiveIndex(null);
+      }
+
+      if (e.key === "ArrowRight") {
+        const newIndex =
+          activeIndex === imagesToShow.length - 1 ? 0 : activeIndex + 1;
+        setActiveIndex(newIndex);
+        setActiveImage(imagesToShow[newIndex]);
+      }
+
+      if (e.key === "ArrowLeft") {
+        const newIndex =
+          activeIndex === 0 ? imagesToShow.length - 1 : activeIndex - 1;
+        setActiveIndex(newIndex);
+        setActiveImage(imagesToShow[newIndex]);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [activeImage, activeIndex, imagesToShow]);
 
   return (
     <Layout>
@@ -293,7 +312,10 @@ const Gallery = () => {
           {imagesToShow.map((src, index) => (
             <div
               key={index}
-              onClick={() => setActiveImage(src)}
+              onClick={() => {
+                setActiveImage(src);
+                setActiveIndex(index);
+              }}
               className="cursor-pointer overflow-hidden rounded-xl"
             >
               <img
@@ -307,27 +329,96 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* ================= FULLSCREEN IMAGE ================= */}
+      {/* ================= FULLSCREEN ================= */}
       {activeImage && (
         <div
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"
-          onClick={() => setActiveImage(null)}
+          onClick={() => {
+            setActiveImage(null);
+            setActiveIndex(null);
+          }}
         >
-          {/* Close Button */}
+          {/* Close */}
           <button
-            className="absolute top-4 right-4 text-white"
-            onClick={() => setActiveImage(null)}
+            className="absolute top-4 right-4 text-white z-50"
+            onClick={() => {
+              setActiveImage(null);
+              setActiveIndex(null);
+            }}
           >
             <X size={32} />
           </button>
 
-          {/* Image */}
+          {/* Desktop Left Arrow */}
+          <button
+            className="hidden md:block absolute left-6 text-white text-5xl z-50"
+            onClick={(e) => {
+              e.stopPropagation();
+              const newIndex =
+                activeIndex === 0
+                  ? imagesToShow.length - 1
+                  : activeIndex - 1;
+              setActiveIndex(newIndex);
+              setActiveImage(imagesToShow[newIndex]);
+            }}
+          >
+            ‹
+          </button>
+
+          {/* Image (Swipe enabled) */}
           <img
             src={activeImage}
             alt=""
             className="max-w-[90vw] max-h-[90vh] object-contain"
             onClick={(e) => e.stopPropagation()}
+            onTouchStart={(e) =>
+              setTouchStartX(e.touches[0].clientX)
+            }
+            onTouchEnd={(e) => {
+              if (touchStartX === null) return;
+
+              const touchEndX = e.changedTouches[0].clientX;
+              const diff = touchStartX - touchEndX;
+
+              // Swipe left → next (loop)
+              if (diff > 50) {
+                const newIndex =
+                  activeIndex === imagesToShow.length - 1
+                    ? 0
+                    : activeIndex + 1;
+                setActiveIndex(newIndex);
+                setActiveImage(imagesToShow[newIndex]);
+              }
+
+              // Swipe right → previous (loop)
+              if (diff < -50) {
+                const newIndex =
+                  activeIndex === 0
+                    ? imagesToShow.length - 1
+                    : activeIndex - 1;
+                setActiveIndex(newIndex);
+                setActiveImage(imagesToShow[newIndex]);
+              }
+
+              setTouchStartX(null);
+            }}
           />
+
+          {/* Desktop Right Arrow */}
+          <button
+            className="hidden md:block absolute right-6 text-white text-5xl z-50"
+            onClick={(e) => {
+              e.stopPropagation();
+              const newIndex =
+                activeIndex === imagesToShow.length - 1
+                  ? 0
+                  : activeIndex + 1;
+              setActiveIndex(newIndex);
+              setActiveImage(imagesToShow[newIndex]);
+            }}
+          >
+            ›
+          </button>
         </div>
       )}
     </Layout>
@@ -335,3 +426,4 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
