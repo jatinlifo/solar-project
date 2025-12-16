@@ -49,13 +49,17 @@ const Footer = () => {
               </a>
 
               {/* Instagram */}
-              <a
-                href="https://www.instagram.com/shreeji_enterprises8?igsh=MWx6MDhueHl4MTJwag=="
-                className="w-10 md:h-9 h-10 bg-[#E4405F] rounded-lg flex items-center justify-center
-               transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-              >
-                <Instagram className="w-5 h-5 text-white" />
-              </a>
+             <a
+  href="https://www.instagram.com/shreeji_enterprises8?igsh=MWx6MDhueHl4MTJwag=="
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-10 h-10 md:h-9 rounded-lg flex items-center justify-center
+             transition-all duration-300 hover:-translate-y-1 hover:shadow-lg
+             bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)]"
+>
+  <Instagram className="w-5 h-5 text-white" />
+</a>
+
 
               {/* X (Official) */}
               <a
