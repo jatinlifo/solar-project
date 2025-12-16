@@ -137,10 +137,16 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
                 <p className="text-primary-foreground/80">info@shreejienterprises8.in </p>
               </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                <p className="text-primary-foreground/80">Kh. No. 96/15, Ground Floor, Holambi Kalan, North Delhi-110082, India</p>
-              </li>
+              {/* <li className="flex items-start gap-3"> */}
+                <a href="https://maps.app.goo.gl/vXE71aX3fXBaBVua8?g_st=awb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3"
+                >
+                  <MapPin className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                  <p className="text-primary-foreground/80">Kh. No. 96/15, Ground Floor, Holambi Kalan, North Delhi-110082, India</p>
+                </a>
+              {/* </li> */}
             </ul>
             {/* <div className="mt-6 p-4 bg-primary/20 rounded-lg">
               <p className="text-sm text-primary-foreground/70">GSTIN: [07BZDPJ7004G1ZN]</p>
