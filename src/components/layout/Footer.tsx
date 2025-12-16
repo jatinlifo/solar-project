@@ -49,16 +49,16 @@ const Footer = () => {
               </a>
 
               {/* Instagram */}
-             <a
-  href="https://www.instagram.com/shreeji_enterprises8?igsh=MWx6MDhueHl4MTJwag=="
-  target="_blank"
-  rel="noopener noreferrer"
-  className="w-10 h-10 md:h-9 rounded-lg flex items-center justify-center
+              <a
+                href="https://www.instagram.com/shreeji_enterprises8?igsh=MWx6MDhueHl4MTJwag=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 md:h-9 rounded-lg flex items-center justify-center
              transition-all duration-300 hover:-translate-y-1 hover:shadow-lg
              bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)]"
->
-  <Instagram className="w-5 h-5 text-white" />
-</a>
+              >
+                <Instagram className="w-5 h-5 text-white" />
+              </a>
 
 
               {/* X (Official) */}
@@ -73,7 +73,7 @@ const Footer = () => {
               {/* WhatsApp (Official) */}
               <a
                 href="#"
-                className="w-10 md:h-9 h-9 bg-[#25D366] rounded-lg flex items-center justify-center
+                className="w-10 md:h-9 h-10 bg-[#25D366] rounded-lg flex items-center justify-center
                transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 <FaWhatsapp className="w-5 h-5 text-white" />
@@ -142,14 +142,14 @@ const Footer = () => {
                 <p className="text-primary-foreground/80">info@shreejienterprises8.in </p>
               </li>
               {/* <li className="flex items-start gap-3"> */}
-                <a href="https://maps.app.goo.gl/vXE71aX3fXBaBVua8?g_st=awb"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-3"
-                >
-                  <MapPin className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                  <p className="text-primary-foreground/80">Kh. No. 96/15, Ground Floor, Holambi Kalan, North Delhi-110082, India</p>
-                </a>
+              <a href="https://maps.app.goo.gl/vXE71aX3fXBaBVua8?g_st=awb"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-3"
+              >
+                <MapPin className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                <p className="text-primary-foreground/80">Kh. No. 96/15, Ground Floor, Holambi Kalan, North Delhi-110082, India</p>
+              </a>
               {/* </li> */}
             </ul>
             {/* <div className="mt-6 p-4 bg-primary/20 rounded-lg">
